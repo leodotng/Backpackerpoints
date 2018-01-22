@@ -1,3 +1,4 @@
+![Backpackerpoints Logo](https://github.com/leodotng/Backpackerpoints/blob/master/images/bpack.png)
 # Backpackerpoints
 
 Backpackerpoints is a new way for backpackers to book hostels and adventure tours. Backpackers can accrue, buy and spend backpackerpoints points using their online backpack to store points. Within each users Backpack dashboard there is a trip inspirer and points section. 
