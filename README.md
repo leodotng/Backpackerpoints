@@ -1,6 +1,6 @@
 ![Backpackerpoints Logo](https://github.com/leodotng/Backpackerpoints/blob/master/images/bpack.png)
-# Backpackerpoints
-
+# Backpackerpoints 
+![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/license-MIT-blue.svg)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 Backpackerpoints is a new way for backpackers to book hostels and adventure tours. Backpackers can accrue, buy and spend backpackerpoints points using their online backpack to store points. Within each users Backpack dashboard there is a trip inspirer and points section. 
 
 ## Getting Started
