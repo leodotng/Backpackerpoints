@@ -7,6 +7,13 @@
   height: 80px;
 }
 
+.Map-window {
+  height: 60vh;
+  width: 80vw;
+  padding-top: 100px;
+  align-content: center;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;

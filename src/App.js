@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, ImplicitCallback } from '@okta/okta-react';
 import mapboxgl from 'mapbox-gl';
 import Home from './Home';
-import Logo from './logo.svg';
+import './App.css';
+import Logo from './images/bp.png';
 
 mapboxgl.accessToken = "pk.eyJ1IjoibGVvZG90bmciLCJhIjoiY2pjczI4ZHh4MG5uczMybnFyMDMxdXBraSJ9.ROR14qeGOQPXNr6MTyzPjA";
 
@@ -39,11 +40,15 @@ class App extends Component {
       zoom
     });
     // added mapbox navigation controls below
+    map.addControl(new mapboxgl.ScaleControl({
+      maxWidth: 30,
+      unit: 'imperial'
+  }));
     map.addControl(new mapboxgl.NavigationControl());
     map.on('load', function() {
       map.loadImage('https://pbs.twimg.com/profile_images/954481161379700736/Y4FygLho_400x400.jpg', function(error, image) {
           if (error) throw error;
-          map.addImage('cat', image);
+          map.addImage('bp', image);
           map.addLayer({
               "id": "points",
               "type": "symbol",
@@ -61,7 +66,7 @@ class App extends Component {
                   }
               },
               "layout": {
-                  "icon-image": "cat",
+                  "icon-image": "bp",
                   "icon-size": 0.15
               }
           });
@@ -85,7 +90,12 @@ class App extends Component {
       
       <div>
         <div>
-        <img src={ require('./logo.svg') } style={pStyle}/>
+        <img src={ require('./images/bp.png') } style={pStyle}/>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         </div>
     
 
@@ -93,7 +103,7 @@ class App extends Component {
         <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
           <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
         </div>
-        <div ref={el => this.mapContainer = el} className="absolute top right left bottom" />
+        <div ref={el => this.mapContainer = el} className="Map-window absolute top right left bottom" />
 
       {/* <Router>
         <Security issuer={config.issuer}
