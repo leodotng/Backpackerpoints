@@ -33,6 +33,8 @@ class App extends Component {
       center: [lng, lat],
       zoom
     });
+    // added mapbox navigation controls below
+    map.addControl(new mapboxgl.NavigationControl());
 
     map.on('move', () => {
       const { lng, lat } = map.getCenter();
