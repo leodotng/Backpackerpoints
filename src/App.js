@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Security, ImplicitCallback } from '@okta/okta-react';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
+var BrowserRouter = require('react-router-dom').BrowserRouter
+var Route = require('react-router-dom').Route
+var Link = require('react-router-dom').Link
 
 const config = {
   issuer: 'https://dev-526103.oktapreview.com/oauth2/default',
