@@ -4,9 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, ImplicitCallback } from '@okta/okta-react';
 import mapboxgl from 'mapbox-gl';
 import Home from './Home';
+import Logo from './logo.svg';
 
 mapboxgl.accessToken = "pk.eyJ1IjoibGVvZG90bmciLCJhIjoiY2pjczI4ZHh4MG5uczMybnFyMDMxdXBraSJ9.ROR14qeGOQPXNr6MTyzPjA";
 
+const pStyle = {
+  fontSize: '15px',
+  textAlign: 'center'
+};
 
 const config = {
   issuer: 'https://dev-526103.oktapreview.com/oauth2/default',
@@ -35,7 +40,33 @@ class App extends Component {
     });
     // added mapbox navigation controls below
     map.addControl(new mapboxgl.NavigationControl());
-
+    map.on('load', function() {
+      map.loadImage('https://pbs.twimg.com/profile_images/954481161379700736/Y4FygLho_400x400.jpg', function(error, image) {
+          if (error) throw error;
+          map.addImage('cat', image);
+          map.addLayer({
+              "id": "points",
+              "type": "symbol",
+              "source": {
+                  "type": "geojson",
+                  "data": {
+                      "type": "FeatureCollection",
+                      "features": [{
+                          "type": "Feature",
+                          "geometry": {
+                              "type": "Point",
+                              "coordinates": [144.9103, -37.82212]
+                          }
+                      }]
+                  }
+              },
+              "layout": {
+                  "icon-image": "cat",
+                  "icon-size": 0.15
+              }
+          });
+      });
+  });
     map.on('move', () => {
       const { lng, lat } = map.getCenter();
 
@@ -46,11 +77,19 @@ class App extends Component {
       });
     });
   }
+  
   render() {
     const { lng, lat, zoom } = this.state;
 
     return (
+      
       <div>
+        <div>
+        <img src={ require('./logo.svg') } style={pStyle}/>
+        </div>
+    
+
+      
         <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
           <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
         </div>
@@ -66,6 +105,7 @@ class App extends Component {
         </Security>
       </Router> */}
       </div>
+    
     );
   }
 }
