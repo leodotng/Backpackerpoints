@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, ImplicitCallback } from '@okta/okta-react';
+import 'reactsymbols-kit/ReactSymbolsKit.css';
+import { RSButton } from 'reactsymbols-kit';
 import mapboxgl from 'mapbox-gl';
 import Home from './Home';
 import './App.css';
 import Logo from './images/bp.png';
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-112995308-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 mapboxgl.accessToken = "pk.eyJ1IjoibGVvZG90bmciLCJhIjoiY2pjczI4ZHh4MG5uczMybnFyMDMxdXBraSJ9.ROR14qeGOQPXNr6MTyzPjA";
 
@@ -90,6 +95,7 @@ class App extends Component {
       
       <div>
         <div>
+          
         <img src={ require('./images/bp.png') } style={pStyle}/>
         <br />
         <br />
@@ -114,6 +120,11 @@ class App extends Component {
         <Route path='/implicit/callback' component={ImplicitCallback}/>
         </Security>
       </Router> */}
+      <RSButton value='Buy Points' background='Orange' />
+      <RSButton value='Earn Points' />
+      <RSButton value='Gift Points' />
+      <RSButton value='Book Hotels' />
+      <RSButton value='Book Adventure Tours' />
       </div>
     
     );
