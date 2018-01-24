@@ -10,8 +10,22 @@ import Box from './components/Box';
 import './App.css';
 import Logo from "./images/bp.png";
 import ReactGA from "react-ga";
+import Socialbutton from './components/SocialButton';
+import SocialButton from "./components/SocialButton";
 ReactGA.initialize("UA-112995308-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
+
+const handleSocialLogin = (user) => {
+  console.log(user)
+}
+
+const handleSocialLoginFailure = (err) => {
+  console.error(err)
+}
+
+
+
+
 
 const pStyle = {
   fontSize: "55px",
@@ -19,6 +33,10 @@ const pStyle = {
   width: "100vw",
   height: "30vh"
 };
+const socialB = {
+  width: "250px",
+  height: "40px"
+}
 const bPoints = {
   fontSize: "55px",
   textAlign: "center",
@@ -55,6 +73,23 @@ class App extends Component {
           <RSButton value="My Digital Backpack" background="Purple" />
           <RSButton value="Login" background="Green" />
           <RSButton value="Logout" background="Green" />
+          <br />
+          <SocialButton
+          provider='facebook'
+          appId='178953362706490'
+          onLoginSuccess={handleSocialLogin}
+          onLoginFailure={handleSocialLoginFailure}
+          >
+         <img src={require("./images/fb.png")} style={socialB} />
+          </SocialButton>
+          <SocialButton
+          provider='google'
+          appId='backpackerpoints-193120'
+          onLoginSuccess={handleSocialLogin}
+          onLoginFailure={handleSocialLoginFailure}
+          >
+         <img src={require("./images/google.png")} style={socialB} />
+          </SocialButton>
         </div>
         <div>
         <Box />
@@ -69,7 +104,7 @@ We are partnering with hostels and adventure tours around the world to accept ou
               </p>
             </div>
         
-        {/* <Router>
+        <Router>
         <Security issuer={config.issuer}
                   client_id={config.client_id}
                   redirect_uri={config.redirect_uri}
@@ -77,7 +112,7 @@ We are partnering with hostels and adventure tours around the world to accept ou
         <Route path='/' exact={true} component={Home}/>
         <Route path='/implicit/callback' component={ImplicitCallback}/>
         </Security>
-      </Router> */}
+      </Router>
       </div>
     );
   }
