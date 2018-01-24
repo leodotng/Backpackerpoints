@@ -4,13 +4,13 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 20px;
 }
 
 .Map-window {
-  height: 60vh;
-  width: 85vw;
-  /* padding-top: 100px; */
+  height: 85vh;
+  width: 100vw;
+  padding-top: 5px; 
   align-content: center;
 }
 
@@ -19,9 +19,9 @@
 }
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 10px;
   padding: 20px;
-  color: white;
+  color: black;
 }
 
 .App-title {

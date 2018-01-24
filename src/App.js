@@ -14,8 +14,21 @@ ReactGA.initialize("UA-112995308-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const pStyle = {
-  fontSize: "15px",
+  fontSize: "55px",
+  textAlign: "center",
+  width: "100vw",
+  height: "30vh"
+};
+const bPoints = {
+  fontSize: "55px",
+  textAlign: "center",
+  paddingTop: "30px",
+  paddingBottom: "30px",
   textAlign: "center"
+};
+
+const centerButtons = {
+  textAlign: 'center'
 };
 
 const config = {
@@ -30,31 +43,18 @@ class App extends Component {
     return (
       <div>
         <div>
-          <img src={require("./images/bp.png")} style={pStyle} />
-         
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
-
-        <div className="Button-align">
+          <img src={require("./images/bpack.png")} style={pStyle} />
+          </div>
+          <h1 style={bPoints}>2,888 Backpacker Points</h1>
+        <div className="Button-align" style={centerButtons}>
           <RSButton value="Buy Points" background="Orange" />
-        
           <RSButton value="Earn Points" background="Orange" />
-        
           <RSButton value="Gift Points" background="Orange" />
-         
           <RSButton value="Book Hostels" />
-          
           <RSButton value="Book Adventure Tours" />
-         
           <RSButton value="My Digital Backpack" background="Purple" />
-          
-          <RSButton value="Login" background="Purple" />
-          
-          <RSButton value="Logout" background="Purple" />
+          <RSButton value="Login" background="Green" />
+          <RSButton value="Logout" background="Green" />
         </div>
         <div>
         <Box />
