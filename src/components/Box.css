@@ -4,14 +4,12 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 30px;
 }
 
 .Map-window {
-  height: 60vh;
-  width: 85vw;
-  /* padding-top: 100px; */
-  align-content: center;
+  height: 30vh;
+  width: 100vw;
 }
 
 .Button-align {

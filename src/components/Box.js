@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 import mapboxgl from "mapbox-gl";
+import './Box.css';
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibGVvZG90bmciLCJhIjoiY2pjczI4ZHh4MG5uczMybnFyMDMxdXBraSJ9.ROR14qeGOQPXNr6MTyzPjA";
@@ -88,7 +89,7 @@ class Box extends Component {
         </div>
         <div
           ref={el => (this.mapContainer = el)}
-          className="Map-window absolute top right left bottom"
+          className="Map-window"
         />
       </div>
     );

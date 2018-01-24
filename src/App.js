@@ -7,7 +7,7 @@ import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
 import Home from "./Home";
 import Box from './components/Box';
-import "./App.css";
+import './App.css';
 import Logo from "./images/bp.png";
 import ReactGA from "react-ga";
 ReactGA.initialize("UA-112995308-1");
@@ -31,35 +31,43 @@ class App extends Component {
       <div>
         <div>
           <img src={require("./images/bp.png")} style={pStyle} />
+         
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+
+        <div className="Button-align">
+          <RSButton value="Buy Points" background="Orange" />
+        
+          <RSButton value="Earn Points" background="Orange" />
+        
+          <RSButton value="Gift Points" background="Orange" />
+         
+          <RSButton value="Book Hostels" />
           
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <RSButton value="Book Adventure Tours" />
+         
+          <RSButton value="My Digital Backpack" background="Purple" />
+          
+          <RSButton value="Login" background="Purple" />
+          
+          <RSButton value="Logout" background="Purple" />
         </div>
         <div>
         <Box />
           </div>
-          
+          <div>
+            <p>
+            Backpackerpoints is a new way to book hostels and adventure tours abroad.
 
-        <div className="Button-align">
-          <RSButton value="Buy Points" background="Orange" />
-          <br />
-          <RSButton value="Earn Points" background="Orange" />
-          <br />
-          <RSButton value="Gift Points" background="Orange" />
-          <br />
-          <RSButton value="Book Hostels" />
-          <br />
-          <RSButton value="Book Adventure Tours" />
-          <br />
-          <RSButton value="My Digital Backpack" background="Purple" />
-          <br />
-          <RSButton value="Login" background="Purple" />
-          <br />
-          <RSButton value="Logout" background="Purple" />
-        </div>
+It’s a travel rewards program just for backpackers. Travelers can Buy, Gift, Earn and Spend backpacker points directly out of their digital backpack from our web app. Think credit card mile programs but entirely separate and just for backpackers.
+
+We are partnering with hostels and adventure tours around the world to accept our points and our web app can cash out users on both sides, both backpackers and merchants.
+              </p>
+            </div>
         
         {/* <Router>
         <Security issuer={config.issuer}
