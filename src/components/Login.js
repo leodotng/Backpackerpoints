@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
 const fixImage = {
-    width: "300px",
-    height: "300px"
+    width: "400px",
+    height: "100px"
   };
 
 
-class EarnPoints extends Component {
+
+class Login extends Component {
 
 
 
@@ -18,11 +18,11 @@ class EarnPoints extends Component {
     render() {
         return (
             <div>
-                <h1> Earn Points Here </h1>
-                <img src="https://calgarysquashleague.ca/wp-content/uploads/earnpoints.png" style={fixImage} />
+                <h1> Login </h1>
+                <img src="https://www.glsen.org/sites/default/files/LOGIN.jpg" style={fixImage} />
                 
                 </div>
         )
     }
 }
-export default EarnPoints;
+export default Login;
