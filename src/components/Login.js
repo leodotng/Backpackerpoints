@@ -1,17 +1,24 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Auth from '../Auth/Auth.js';
+
 
 const fixImage = {
-    width: "400px",
-    height: "100px"
+    width: "300px",
+    height: "50px"
   };
 
+  const fixImageTwo = {
+    width: "250px",
+    height: "250px"
+  };
+  const auth = new Auth();
+//   auth.login();
 
 
 class Login extends Component {
-
-
+    
 
 
 
@@ -20,8 +27,10 @@ class Login extends Component {
             <div>
                 <h1> Login </h1>
                 <img src="https://www.glsen.org/sites/default/files/LOGIN.jpg" style={fixImage} />
-                
+               
+
                 </div>
+                
         )
     }
 }

@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-import { Security, ImplicitCallback } from "@okta/okta-react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { Security, ImplicitCallback } from "@okta/okta-react";
 import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
@@ -17,6 +13,7 @@ import EarnPoints from "./components/EarnPoints";
 import MyBackpack from "./components/MyBackpack";
 import SpendPoints from "./components/SpendPoints";
 import Login from "./components/Login";
+// import auth0 from 'auth0-js';
 
 import "./App.css";
 import Logo from "./images/bp.png";
@@ -60,42 +57,40 @@ const centerButtons = {
   textAlign: "center"
 };
 
-const config = {
-  issuer: "https://dev-526103.oktapreview.com/oauth2/default",
-  redirect_uri: window.location.origin + "/implicit/callback",
-  client_id: "{0oadqlnatb1TIjCRw0h7}"
-};
+// const config = {
+//   issuer: "https://dev-526103.oktapreview.com/oauth2/default",
+//   redirect_uri: window.location.origin + "/implicit/callback",
+//   client_id: "{0oadqlnatb1TIjCRw0h7}"
+// };
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-  
           <div>
             <img src={require("./images/bpack.png")} style={pStyle} />
           </div>
           <h1 style={bPoints}>6,288 Backpacker Points</h1>
           <div className="Button-align" style={centerButtons}>
-          <Link to={`/BuyPoints`}>
-            <RSButton value="Buy Points" background="Orange" />
-          </Link>
-          <Link to={`/GiftPoints`}>
-            <RSButton value="Gift Points" background="Orange" />
+            <Link to={`/BuyPoints`}>
+              <RSButton value="Buy Points" background="Orange" />
+            </Link>
+            <Link to={`/GiftPoints`}>
+              <RSButton value="Gift Points" background="Orange" />
             </Link>
             <Link to={`/EarnPoints`}>
-            <RSButton value="Earn Points" background="Orange" />
+              <RSButton value="Earn Points" background="Orange" />
             </Link>
-
 
             <RSButton value="Book Hostels" />
             <RSButton value="Book Adventure Tours" />
 
             <Link to={`/MyBackpack`}>
-            <RSButton value="My Digital Backpack" background="Purple" />
+              <RSButton value="My Digital Backpack" background="Purple" />
             </Link>
-            <Link to={`/Login`}>
-            <RSButton value="Login" background="Green" />
+            <Link to={`/login`}>
+              <RSButton value="Login" background="Green" />
             </Link>
 
             <RSButton value="Logout" background="Green" />
@@ -141,23 +136,14 @@ class App extends Component {
             </p>
           </div>
 
-          {/* <Router>
-        <Security issuer={config.issuer}
-                  client_id={config.client_id}
-                  redirect_uri={config.redirect_uri}
-        >
-        <Route path='/' exact={true} component={Home}/>
-        <Route path='/implicit/callback' component={ImplicitCallback}/>
-        </Security>
-      </Router> */}
-      <Route path="/BuyPoints" component={BuyPoints}/>
-      <Route path="/GiftPoints" component={GiftPoints}/>
-      <Route path="/EarnPoints" component={EarnPoints}/>
-      <Route path="/SpendPoints" component={SpendPoints}/>
-      <Route path="/MyBackpack" component={MyBackpack}/>
-      <Route path="/Login" component={Login}/>
+          <Route path="/BuyPoints" component={BuyPoints} />
+          <Route path="/GiftPoints" component={GiftPoints} />
+          <Route path="/EarnPoints" component={EarnPoints} />
+          <Route path="/SpendPoints" component={SpendPoints} />
+          <Route path="/MyBackpack" component={MyBackpack} />
+          <Route path="/login" component={Login} />
         </div>
-        </Router>
+      </Router>
     );
   }
 }

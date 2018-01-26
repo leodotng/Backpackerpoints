@@ -4,17 +4,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const fixImage = {
     width: "300px",
-    height: "300px"
+    height: "300px",
+    align: "center"
   };
-
-
-
 class BuyPoints extends Component {
-
-    
-
-
-
     render() {
         return (
                 <div>
