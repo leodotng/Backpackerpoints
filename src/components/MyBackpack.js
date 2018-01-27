@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const fixImage = {
-    width: "300px",
-    height: "300px"
+    width: "100px",
+    height: "100px"
   };
 
 

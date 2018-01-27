@@ -13,8 +13,8 @@ import {
   List,
   Menu,
   Segment,
-  Visibility,
-} from 'semantic-ui-react';
+  Visibility
+} from "semantic-ui-react";
 import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
@@ -73,27 +73,23 @@ const centerButtons = {
   textAlign: "center"
 };
 
-
 class App extends Component {
   render() {
     return (
       <Router>
         <Switch>
-      <div>
-        
-        <HomepageLayout>
-        <Dapp />
-        
-        </HomepageLayout>
-        <Route path="/buypoints" component={BuyPoints} />
-          <Route path="/giftpoints" component={GiftPoints} />
-          <Route path="/earnpoints" component={EarnPoints} />
-          <Route path="/spendpoints" component={SpendPoints} />
-          <Route path="/mybackpack" component={MyBackpack} />
-          <Route path="/login" component={Login} />
-          <Route path="/book" component={Book} />
-          
-        </div>
+          <div>
+            {/* <HomepageLayout> */}
+              <Dapp />
+            {/* </HomepageLayout> */}
+            <Route path="/buypoints" component={BuyPoints} />
+            <Route path="/giftpoints" component={GiftPoints} />
+            <Route path="/earnpoints" component={EarnPoints} />
+            <Route path="/spendpoints" component={SpendPoints} />
+            <Route path="/mybackpack" component={MyBackpack} />
+            <Route path="/login" component={Login} />
+            <Route path="/book" component={Book} />
+          </div>
         </Switch>
       </Router>
     );
