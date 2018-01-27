@@ -81,8 +81,10 @@ class App extends Component {
         <Switch>
       <div>
         
-        <HomepageLayout />
+        <HomepageLayout>
         <Dapp />
+        
+        </HomepageLayout>
         <Route path="/buypoints" component={BuyPoints} />
           <Route path="/giftpoints" component={GiftPoints} />
           <Route path="/earnpoints" component={EarnPoints} />
@@ -90,6 +92,7 @@ class App extends Component {
           <Route path="/mybackpack" component={MyBackpack} />
           <Route path="/login" component={Login} />
           <Route path="/book" component={Book} />
+          
         </div>
         </Switch>
       </Router>

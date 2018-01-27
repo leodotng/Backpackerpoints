@@ -31,7 +31,7 @@ import Login from "./components/Login";
 // import auth0 from 'auth0-js';
 
 import "./App.css";
-import Logo from "./images/bp.png";
+// import Logo from "./images/bp.png";
 import ReactGA from "react-ga";
 import SocialButton from "./components/SocialButton";
 import InstagramLogin from "react-instagram-login";
@@ -79,7 +79,7 @@ class Dapp extends Component {
       
 <div>
         <div>
-            <img src={require("./images/bpack.png")} style={pStyle} />
+            {/* <img src={require("./images/bpack.png")} style={pStyle} /> */}
           </div>
           <div>
           <h1 style={bPoints}>6,288 Backpacker Points</h1>
