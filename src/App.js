@@ -6,12 +6,12 @@ import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
 import Home from "./Home";
-import Box from "./components/Box";
 import BuyPoints from "./components/BuyPoints";
 import GiftPoints from "./components/GiftPoints";
 import EarnPoints from "./components/EarnPoints";
 import MyBackpack from "./components/MyBackpack";
 import SpendPoints from "./components/SpendPoints";
+import Book from "./components/Book";
 import Login from "./components/Login";
 // import auth0 from 'auth0-js';
 
@@ -82,9 +82,11 @@ class App extends Component {
             <Link to={`/EarnPoints`}>
               <RSButton value="Earn Points" background="Orange" />
             </Link>
-
+            <Link to={`/Book`}>
             <RSButton value="Book Hostels" />
+            </Link>
             <RSButton value="Book Adventure Tours" />
+            
 
             <Link to={`/MyBackpack`}>
               <RSButton value="My Digital Backpack" background="Purple" />
@@ -142,6 +144,7 @@ class App extends Component {
           <Route path="/SpendPoints" component={SpendPoints} />
           <Route path="/MyBackpack" component={MyBackpack} />
           <Route path="/login" component={Login} />
+          <Route path="/Book" component={Book} />
         </div>
       </Router>
     );

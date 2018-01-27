@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 import mapboxgl from "mapbox-gl";
-import './Box.css';
+import "./Box.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibGVvZG90bmciLCJhIjoiY2pjczI4ZHh4MG5uczMybnFyMDMxdXBraSJ9.ROR14qeGOQPXNr6MTyzPjA";
@@ -13,9 +13,9 @@ class Box extends Component {
   constructor(props: Props) {
     super(props);
     this.state = {
-      lng: 144.9303,
-      lat: -37.82212,
-      zoom: 10.5
+      lng: -71.9720165,
+      lat: -13.5240063,
+      zoom: 13.5
     };
   }
 
@@ -38,7 +38,7 @@ class Box extends Component {
     map.addControl(new mapboxgl.NavigationControl());
     map.on("load", function() {
       map.loadImage(
-        "https://pbs.twimg.com/profile_images/954481161379700736/Y4FygLho_400x400.jpg",
+        "https://cdn1.iconfinder.com/data/icons/orientation-2/32/location-256.png",
         function(error, image) {
           if (error) throw error;
           map.addImage("bp", image);
@@ -54,15 +54,79 @@ class Box extends Component {
                     type: "Feature",
                     geometry: {
                       type: "Point",
-                      coordinates: [144.9103, -37.82212]
+                      coordinates: [-71.98215490000001, -13.5178622]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.97731569999996, -13.5122056]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.98107140000002, -13.5161739]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.98384959999999, -13.5156302]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.9805093, -13.5195037]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.98504020000001, -13.5214454]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.98216259999998, -13.5161239]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.98190369999998, -13.5160066]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.97985210000002, -13.5151929]
+                    }
+                  },
+                  {
+                    type: "Feature",
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-71.97821770000002, -13.5199641]
                     }
                   }
+
                 ]
               }
             },
             layout: {
               "icon-image": "bp",
-              "icon-size": 0.15
+              "icon-size": 0.2
             }
           });
         }
@@ -87,10 +151,7 @@ class Box extends Component {
         <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
           <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
         </div>
-        <div
-          ref={el => (this.mapContainer = el)}
-          className="Map-window"
-        />
+        <div ref={el => (this.mapContainer = el)} className="Map-window" />
       </div>
     );
   }

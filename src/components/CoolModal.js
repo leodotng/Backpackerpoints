@@ -1,1 +1,0 @@
-// import Modal from 'some-react-modal'

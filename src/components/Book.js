@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Box from "./Box";
+
 
 const fixImage = {
     width: "150px",
@@ -8,18 +10,16 @@ const fixImage = {
     align: "middle",
     display: "inline-block"
   };
-class BuyPoints extends Component {
+class Book extends Component {
     render() {
         return (
                 <div>
-                    <h1> Buy Points Here </h1>
-                    <img src="http://cdn.onlinewebfonts.com/svg/img_549461.png" style={fixImage} />
-                    <p> Buy 100 points $25 </p>
-                    <p> Buy 200 points $45 </p>
-                    <p> Buy 500 points $100 </p>
+                    <h1> Book your Hostel with your Backpackerpoints! </h1>
+                    <img src="http://s3.amazonaws.com/popalz-media/listingimages/-46368924391.JPG" style={fixImage} />
+                    <Box />
                     
                 </div>
         )
     }
 }
-export default BuyPoints;
+export default Book;
