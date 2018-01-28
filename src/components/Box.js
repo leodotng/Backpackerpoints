@@ -42,7 +42,7 @@ class Box extends Component {
     map.addControl(new mapboxgl.NavigationControl());
     map.on("load", function() {
       map.loadImage(
-        "/images/icon.png",
+        "https://cdn1.iconfinder.com/data/icons/orientation-2/32/location-256.png",
         function(error, image) {
           if (error) throw error;
           map.addImage("bp", image);
