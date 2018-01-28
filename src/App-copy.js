@@ -19,7 +19,7 @@ import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
 import Home from "./Home";
-import Dashboard from "./components/Dashboard";
+import Dapp from "./Dapp";
 import BuyPoints from "./components/BuyPoints";
 import GiftPoints from "./components/GiftPoints";
 import EarnPoints from "./components/EarnPoints";
@@ -82,11 +82,10 @@ class App extends Component {
             <HomepageLayout>
               {/* <Dapp /> */}
             </HomepageLayout>
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/buy" component={BuyPoints} />
-            <Route path="/gift" component={GiftPoints} />
-            <Route path="/earn" component={EarnPoints} />
-            <Route path="/spend" component={SpendPoints} />
+            <Route path="/buypoints" component={BuyPoints} />
+            <Route path="/giftpoints" component={GiftPoints} />
+            <Route path="/earnpoints" component={EarnPoints} />
+            <Route path="/spendpoints" component={SpendPoints} />
             <Route path="/mybackpack" component={MyBackpack} />
             <Route path="/login" component={Login} />
             <Route path="/book" component={Book} />

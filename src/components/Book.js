@@ -5,8 +5,8 @@ import Box from "./Box";
 
 
 const fixImage = {
-    width: "150px",
-    height: "150px",
+    width: "50px",
+    height: "50px",
     align: "middle",
     display: "inline-block"
   };

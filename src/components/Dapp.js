@@ -18,22 +18,22 @@ import {
 import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
-import Home from "./Home";
-import BuyPoints from "./components/BuyPoints";
-import GiftPoints from "./components/GiftPoints";
-import EarnPoints from "./components/EarnPoints";
-import MyBackpack from "./components/MyBackpack";
-import SpendPoints from "./components/SpendPoints";
-import HomepageLayout from "./components/HomepageLayout";
-import Book from "./components/Book";
-import Login from "./components/Login";
+// import Home from "./Home";
+import BuyPoints from "./BuyPoints";
+import GiftPoints from "./GiftPoints";
+import EarnPoints from "./EarnPoints";
+import MyBackpack from "./MyBackpack";
+import SpendPoints from "./SpendPoints";
+import HomepageLayout from "./HomepageLayout";
+import Book from "./Book";
+import Login from "./Login";
 
 // import auth0 from 'auth0-js';
 
 import "./App.css";
 // import Logo from "./images/bp.png";
 import ReactGA from "react-ga";
-import SocialButton from "./components/SocialButton";
+import SocialButton from "./SocialButton";
 import InstagramLogin from "react-instagram-login";
 ReactGA.initialize("UA-112995308-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -56,9 +56,13 @@ const pStyle = {
   width: "100vw",
   height: "30vh"
 };
-const socialB = {
-  width: "250px",
-  height: "40px"
+const socialButtonFb = {
+  width: "200px",
+  height: "50px"
+};
+const socialButtonGoogle = {
+  width: "200px",
+  height: "30px"
 };
 const bPoints = {
   fontSize: "55px",
@@ -84,7 +88,7 @@ class Dapp extends Component {
           <div>
           <h1 style={bPoints}>6,288 Backpacker Points</h1>
           </div>
-          <div className="Button-align" style={centerButtons}>
+          {/* <div className="Button-align" style={centerButtons}>
             <Link to={`/buypoints`}> 
               <RSButton value="Buy Points" background="Orange" />
             </Link> 
@@ -107,7 +111,7 @@ class Dapp extends Component {
               <RSButton value="Login" background="Green" />
             </Link>
 
-            <RSButton value="Logout" background="Green" />
+            <RSButton value="Logout" background="Green" /> */}
             <br />
             <SocialButton
               provider="facebook"
@@ -115,7 +119,7 @@ class Dapp extends Component {
               onLoginSuccess={handleSocialLogin}
               onLoginFailure={handleSocialLoginFailure}
             >
-              <img src={require("./images/fb.png")} style={socialB} />
+              {/* <img src={require("./images/fb.png")} style={socialButtonFb} /> */}
             </SocialButton>
             <SocialButton
               provider="google"
@@ -123,33 +127,33 @@ class Dapp extends Component {
               onLoginSuccess={handleSocialLogin}
               onLoginFailure={handleSocialLoginFailure}
             >
-              <img src={require("./images/google.png")} style={socialB} />
+              {/* <img src={require("./images/google.png")} style={socialButtonGoogle} /> */}
             </SocialButton>
             <br />
-            <InstagramLogin
+            {/* <InstagramLogin
               clientId="fa4d833b7db84483a21b13423af3bac5"
               // buttonText="Login"
               onSuccess={responseInstagram}
               onFailure={responseInstagram}
               style={bPoints}
-            />
+            /> */}
             {/* <img src={require("./images/instagram.png")} style={socialB} />
           </InstagramLogin> */}
           </div>
-          <div>{/* <Box /> */}</div>
-          <div>
-            <p>
-              Backpackerpoints is a new way to book hostels and adventure tours
-              abroad. It’s a travel rewards program just for backpackers.
-              Travelers can Buy, Gift, Earn and Spend backpacker points directly
-              out of their digital backpack from our web app. Think credit card
-              mile programs but entirely separate and just for backpackers. We
-              are partnering with hostels and adventure tours around the world
-              to accept our points and our web app can cash out users on both
-              sides, both backpackers and merchants.
-            </p>
-          </div>
-</div>
+          
+          // <div>
+          //   <p>
+          //     Backpackerpoints is a new way to book hostels and adventure tours
+          //     abroad. It’s a travel rewards program just for backpackers.
+          //     Travelers can Buy, Gift, Earn and Spend backpacker points directly
+          //     out of their digital backpack from our web app. Think credit card
+          //     mile programs but entirely separate and just for backpackers. We
+          //     are partnering with hostels and adventure tours around the world
+          //     to accept our points and our web app can cash out users on both
+          //     sides, both backpackers and merchants.
+          //   </p>
+          // </div>
+// </div>
 
     );
   }
