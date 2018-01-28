@@ -53,7 +53,7 @@ const handleSocialLoginFailure = err => {
 const pStyle = {
   fontSize: "55px",
   textAlign: "center",
-  width: "100vw",
+  width: "50vw",
   height: "30vh"
 };
 const socialButtonFb = {

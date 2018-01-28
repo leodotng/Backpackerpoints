@@ -79,9 +79,8 @@ class App extends Component {
       <Router>
         <Switch>
           <div>
-            <HomepageLayout>
-              {/* <Dapp /> */}
-            </HomepageLayout>
+            <HomepageLayout />
+              
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/buy" component={BuyPoints} />
             <Route path="/gift" component={GiftPoints} />

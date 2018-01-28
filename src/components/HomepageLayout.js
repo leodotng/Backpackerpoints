@@ -68,29 +68,28 @@ export default class HomepageLayout extends Component {
           >
             <Container>
               <Menu inverted pointing secondary size="large">
-              <Link to={`/home`}>
-                <Menu.Item as="a" active>
-                
-                  Home
-                  
-                </Menu.Item></Link>
                 <Link to={`/home`}>
-                <Menu.Item as="a">Dashboard</Menu.Item>
+                  <Menu.Item as="a" active>
+                    Home
+                  </Menu.Item>
+                </Link>
+                <Link to={`/home`}>
+                  <Menu.Item as="a">Dashboard</Menu.Item>
                 </Link>
                 <Link to={`/mybackpack`}>
-                <Menu.Item as="a">My Backpack</Menu.Item>
+                  <Menu.Item as="a">My Backpack</Menu.Item>
                 </Link>
                 <Link to={`/buy`}>
-                <Menu.Item as="a">Buy Points</Menu.Item>
+                  <Menu.Item as="a">Buy</Menu.Item>
                 </Link>
                 <Link to={`/earn`}>
-                <Menu.Item as="a">Earn Points</Menu.Item>
+                  <Menu.Item as="a">Earn</Menu.Item>
                 </Link>
                 <Link to={`/gift`}>
-                <Menu.Item as="a">Gift Points</Menu.Item>
+                  <Menu.Item as="a">Gift</Menu.Item>
                 </Link>
                 <Link to={`/book`}>
-                <Menu.Item as="a">Book Travel</Menu.Item>
+                  <Menu.Item as="a">Book Travel</Menu.Item>
                 </Link>
                 <Menu.Item position="right">
                   <Button basic color="blue">
@@ -109,7 +108,7 @@ export default class HomepageLayout extends Component {
                 content="Backpackerpoints"
                 inverted
                 style={{
-                  fontSize: "4em",
+                  fontSize: "6em",
                   fontWeight: "normal",
                   marginBottom: 0,
                   marginTop: "3em"

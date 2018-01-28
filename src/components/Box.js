@@ -9,6 +9,10 @@ import "./Box.css";
 mapboxgl.accessToken =
   "pk.eyJ1IjoibGVvZG90bmciLCJhIjoiY2pjczI4ZHh4MG5uczMybnFyMDMxdXBraSJ9.ROR14qeGOQPXNr6MTyzPjA";
 
+  const mapbStyles = {
+    width: "300px"
+  }
+
 class Box extends Component {
   constructor(props: Props) {
     super(props);
@@ -38,7 +42,7 @@ class Box extends Component {
     map.addControl(new mapboxgl.NavigationControl());
     map.on("load", function() {
       map.loadImage(
-        "https://cdn1.iconfinder.com/data/icons/orientation-2/32/location-256.png",
+        "/images/icon.png",
         function(error, image) {
           if (error) throw error;
           map.addImage("bp", image);
@@ -141,6 +145,12 @@ class Box extends Component {
         zoom: map.getZoom().toFixed(2)
       });
     });
+
+    // map.on('move', function(event) {
+    //   if (event.originalEvent) {
+    //   console.log('A human moved the map');
+    //   }
+    //  });
   }
 
   render() {
@@ -149,9 +159,13 @@ class Box extends Component {
     return (
       <div>
         <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
-          <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
+          
         </div>
-        <div ref={el => (this.mapContainer = el)} className="Map-window" />
+        <div>
+        <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
+        </div>
+        <div className="mapbStyles" ref={el => (this.mapContainer = el)} className="Map-window" />
+        
       </div>
     );
   }
