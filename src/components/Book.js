@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Box from "./Box";
 import Gmaps from "./Gmaps";
+import DemoCarousel from './DemoCarousel';
 import "./App.css";
 
 
@@ -21,11 +22,15 @@ import "./App.css";
 class Book extends Component {
     render() {
         return (
+            <div>
                 <div>
-                    {/* <h1> Book your Hostel with your Backpackerpoints! </h1>
-                    <img src="http://s3.amazonaws.com/popalz-media/listingimages/-46368924391.JPG" style={fixImage} /> */}
-                    {/* <Gmaps /> */}
+                    
+                    {/* <DemoCarousel /> */}
                 </div>
+                <div>
+                <Gmaps />
+                    </div>
+                    </div>
         )
     }
 }

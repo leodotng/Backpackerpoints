@@ -28,6 +28,7 @@ import Spend from "./components/Spend";
 import HomepageLayout from "./components/HomepageLayout";
 import Book from "./components/Book";
 import Login from "./components/Login";
+// import Carousel from './components/Carousel';
 
 // import auth0 from 'auth0-js';
 

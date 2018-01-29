@@ -14,6 +14,7 @@ class Earn extends Component {
         <h1> Earn Points Here </h1>
         <img
           src="https://calgarysquashleague.ca/wp-content/uploads/earnpoints.png"
+          alt="Earn Points!"
           style={fixImage}
         />
       </div>

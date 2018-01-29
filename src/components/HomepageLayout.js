@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Dapp from "./Dapp";
 import Gmaps from "./Gmaps";
+import DemoCarousel from './DemoCarousel';
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -80,7 +81,7 @@ export default class HomepageLayout extends Component {
                     Home
                   </Menu.Item>
                 </Link>
-                <Link to={`/home`}>
+                <Link to={`/dashboard`}>
                   <Menu.Item as="a">Dashboard</Menu.Item>
                 </Link>
                 {/* <Link to={`/mybackpack`}>
@@ -146,7 +147,6 @@ export default class HomepageLayout extends Component {
                 <Icon name="instagram" /> Instagram
               </Button>
               <br />
-              <Gmaps />
               {/* <Button basic color="violet" primary size="huge">
                 My Backpack
                 <Icon name="right arrow" />
@@ -156,9 +156,7 @@ export default class HomepageLayout extends Component {
           </Segment>
         </Visibility>
 
-        
-        
-<Segment style={{ padding: "0em" }} vertical>
+        <Segment style={{ padding: "0em" }} vertical>
           <Grid celled="internally" columns="equal" stackable>
             <Grid.Row textAlign="center">
               <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
