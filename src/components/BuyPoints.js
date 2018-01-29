@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+// import ReactDOM from "react-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const fixImage = {
-    width: "50px",
-    height: "50px",
-    align: "middle",
-    display: "inline-block"
-  };
+// const fixImage = {
+//     width: "50px",
+//     height: "50px",
+//     align: "middle",
+//     display: "inline-block"
+//   };
   const buttonProperties = {
     width: "120px",
     height: "60px"

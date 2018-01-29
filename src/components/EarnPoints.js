@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+// import ReactDOM from "react-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 const fixImage = {

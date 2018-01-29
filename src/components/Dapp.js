@@ -50,70 +50,38 @@ const handleSocialLoginFailure = err => {
   console.error(err);
 };
 
-const pStyle = {
-  fontSize: "55px",
-  textAlign: "center",
-  width: "50vw",
-  height: "30vh"
-};
-const socialButtonFb = {
-  width: "200px",
-  height: "50px"
-};
-const socialButtonGoogle = {
-  width: "200px",
-  height: "30px"
-};
-const bPoints = {
-  fontSize: "55px",
-  textAlign: "center",
-  paddingTop: "30px",
-  paddingBottom: "30px",
-  textAlign: "center"
-};
+// const pStyle = {
+//   fontSize: "55px",
+//   textAlign: "center",
+//   width: "50vw",
+//   height: "30vh"
+// };
+// const socialButtonFb = {
+//   width: "200px",
+//   height: "50px"
+// };
+// const socialButtonGoogle = {
+//   width: "200px",
+//   height: "30px"
+// };
+// const bPoints = {
+//   fontSize: "55px",
+//   textAlign: "center",
+//   paddingTop: "30px",
+//   paddingBottom: "30px",
+//   textAlign: "center"
+// };
 
-const centerButtons = {
-  textAlign: "center"
-};
+// const centerButtons = {
+//   textAlign: "center"
+// };
 
 
 class Dapp extends Component {
   render() {
     return (
-      
 <div>
-        <div>
-            {/* <img src={require("./images/bpack.png")} style={pStyle} /> */}
-          </div>
-          <div>
-          <h1 style={bPoints}>6,288 Backpacker Points</h1>
-          </div>
-          {/* <div className="Button-align" style={centerButtons}>
-            <Link to={`/buypoints`}> 
-              <RSButton value="Buy Points" background="Orange" />
-            </Link> 
-            <Link to={`/giftpoints`}> 
-              <RSButton value="Gift Points" background="Orange" />
-            </Link>
-             <Link to={`/earnpoints`}> 
-              <RSButton value="Earn Points" background="Orange" />
-            </Link>
-            <Link to={`/book`}>
-            <RSButton value="Book Hostels" />
-            </Link>
-            <RSButton value="Book Adventure Tours" />
-            
-
-            <Link to={`/mybackpack`}> 
-              <RSButton value="My Digital Backpack" background="Purple" />
-             </Link> 
-            <Link to={`/login`}> 
-              <RSButton value="Login" background="Green" />
-            </Link>
-
-            <RSButton value="Logout" background="Green" /> */}
-            <br />
-            <SocialButton
+          <SocialButton
               provider="facebook"
               appId="178953362706490"
               onLoginSuccess={handleSocialLogin}
@@ -129,7 +97,7 @@ class Dapp extends Component {
             >
               {/* <img src={require("./images/google.png")} style={socialButtonGoogle} /> */}
             </SocialButton>
-            <br />
+            
             {/* <InstagramLogin
               clientId="fa4d833b7db84483a21b13423af3bac5"
               // buttonText="Login"

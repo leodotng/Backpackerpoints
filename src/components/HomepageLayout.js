@@ -2,18 +2,21 @@ import React, { Component } from "react";
 import {
   Button,
   Container,
+  Image,
   Divider,
   Grid,
   Header,
   Icon,
-  Image,
   List,
   Menu,
   Segment,
   Visibility
 } from "semantic-ui-react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+// Removed Divider and Image
+import { Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Dapp from "./Dapp";
+import Gmaps from "./Gmaps";
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -22,7 +25,7 @@ const FixedMenu = () => (
         Home
       </Menu.Item>
       <Menu.Item as="a">Dashboard</Menu.Item>
-      <Menu.Item as="a">My Backpack</Menu.Item>
+      {/* <Menu.Item as="a">My Backpack</Menu.Item> */}
       <Menu.Item as="a">Buy Points</Menu.Item>
       <Menu.Item as="a">Gift Points</Menu.Item>
       <Menu.Item as="a">Earn Points</Menu.Item>
@@ -42,6 +45,10 @@ const FixedMenu = () => (
   </Menu>
 );
 
+// const backgroundStyles = {
+//   height: '30vh',
+//   width: '40vw'
+// }
 export default class HomepageLayout extends Component {
   state = {};
 
@@ -76,9 +83,9 @@ export default class HomepageLayout extends Component {
                 <Link to={`/home`}>
                   <Menu.Item as="a">Dashboard</Menu.Item>
                 </Link>
-                <Link to={`/mybackpack`}>
+                {/* <Link to={`/mybackpack`}>
                   <Menu.Item as="a">My Backpack</Menu.Item>
-                </Link>
+                </Link> */}
                 <Link to={`/buy`}>
                   <Menu.Item as="a">Buy</Menu.Item>
                 </Link>
@@ -92,6 +99,9 @@ export default class HomepageLayout extends Component {
                   <Menu.Item as="a">Book Travel</Menu.Item>
                 </Link>
                 <Menu.Item position="right">
+                  <Button basic color="violet">
+                    My Backpack
+                  </Button>
                   <Button basic color="blue">
                     Log in
                   </Button>
@@ -101,17 +111,20 @@ export default class HomepageLayout extends Component {
                 </Menu.Item>
               </Menu>
             </Container>
-
+            <Container>
+              {/* <img src={require('./images/backpackerlogo.png')} /> */}
+            </Container>
             <Container text>
+              <Image src="../images/backpackerlogo.png" size="small" />
               <Header
                 as="h1"
                 content="Backpackerpoints"
                 inverted
                 style={{
-                  fontSize: "6em",
+                  fontSize: "5em",
                   fontWeight: "normal",
                   marginBottom: 0,
-                  marginTop: "3em"
+                  marginTop: ".1em"
                 }}
               />
               <Header
@@ -120,31 +133,32 @@ export default class HomepageLayout extends Component {
                 inverted
                 style={{ fontSize: "1.7em", fontWeight: "normal" }}
               />
-              <Button basic color="violet" primary size="huge">
-                My Backpack
-                <Icon name="right arrow" />
-              </Button>
               <br />
               <br />
-              Login with:
-              <br />
+              Login with: &nbsp;
               <Button color="facebook">
                 <Icon name="facebook" /> Facebook
               </Button>
-              <br />
               <Button color="google plus">
                 <Icon name="google plus" /> Google
               </Button>
-              <br />
               <Button color="instagram">
                 <Icon name="instagram" /> Instagram
               </Button>
-              <Dapp />
+              <br />
+              <Gmaps />
+              {/* <Button basic color="violet" primary size="huge">
+                My Backpack
+                <Icon name="right arrow" />
+              </Button> */}
             </Container>
+            {/* <Dapp /> */}
           </Segment>
         </Visibility>
 
-        <Segment style={{ padding: "0em" }} vertical>
+        
+        
+<Segment style={{ padding: "0em" }} vertical>
           <Grid celled="internally" columns="equal" stackable>
             <Grid.Row textAlign="center">
               <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
@@ -164,7 +178,7 @@ export default class HomepageLayout extends Component {
                   Mike Doe just booked XYZ with 400 points!
                 </p>
               </Grid.Column>
-              <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+              <Grid.Column style={{ paddingBottom: "2em", paddingTop: "5em" }}>
                 <Header as="h3" style={{ fontSize: "2em" }}>
                   Backpack Details here
                 </Header>
@@ -176,8 +190,7 @@ export default class HomepageLayout extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
-
-        <Segment inverted vertical style={{ padding: "5em 0em" }}>
+        <Segment inverted vertical style={{ padding: "3em 0em" }}>
           <Container>
             <Grid divided inverted stackable>
               <Grid.Row>

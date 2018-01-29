@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "reactsymbols-kit/ReactSymbolsKit.css";
-import { RSButton } from "reactsymbols-kit";
+// import { RSButton } from "reactsymbols-kit";
 import mapboxgl from "mapbox-gl";
 import "./Box.css";
 
@@ -130,7 +130,7 @@ class Box extends Component {
             },
             layout: {
               "icon-image": "bp",
-              "icon-size": 0.2
+              "icon-size": 0.15
             }
           });
         }
