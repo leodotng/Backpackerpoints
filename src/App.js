@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 // import { Security, ImplicitCallback } from "@okta/okta-react";
 import {
   Button,
@@ -30,7 +30,8 @@ import Book from "./components/Book";
 import Login from "./components/Login";
 // import Carousel from './components/Carousel';
 
-// import auth0 from 'auth0-js';
+import auth0 from 'auth0-js';
+import Auth from "./Auth/Auth.js";
 
 import "./App.css";
 import Logo from "./images/bp.png";
@@ -77,22 +78,14 @@ const centerButtons = {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <Switch>
-          <div>
-            
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/buy" component={Buy} />
-            <Route path="/gift" component={Gift} />
-            <Route path="/earn" component={Earn} />
-            <Route path="/spend" component={Spend} />
-            <Route path="/mybackpack" component={MyBackpack} />
-            <Route path="/login" component={Login} />
-            <Route path="/book" component={Book} />
-            <HomepageLayout />
-          </div>
+          {/* <BrowserRouter> */}
+          <HomepageLayout />
+           
+          {/* </BrowserRouter> */}
         </Switch>
-      </Router>
+      </BrowserRouter>
     );
   }
 }

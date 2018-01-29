@@ -3,8 +3,8 @@ import React, { Component } from "react";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const fixImage = {
-  width: "300px",
-  height: "300px"
+  width: "50px",
+  height: "50px"
 };
 
 class Earn extends Component {

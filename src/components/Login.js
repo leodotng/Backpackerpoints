@@ -12,8 +12,7 @@ const fixImageTwo = {
   width: "250px",
   height: "250px"
 };
-const auth = new Auth();
-//   auth.login();
+
 
 class Login extends Component {
   render() {

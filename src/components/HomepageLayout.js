@@ -3,7 +3,7 @@ import {
   Button,
   Container,
   Image,
-  Divider,
+  // Divider,
   Grid,
   Header,
   Icon,
@@ -13,11 +13,46 @@ import {
   Visibility
 } from "semantic-ui-react";
 // Removed Divider and Image
-import { Link } from "react-router-dom";
+import { BrowserRouter,
+  Route, 
+  Link, 
+  Switch } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Dapp from "./Dapp";
 import Gmaps from "./Gmaps";
-import DemoCarousel from './DemoCarousel';
+import DemoCarousel from "./DemoCarousel";
+import SocialButton from "./SocialButton";
+import InstagramLogin from "react-instagram-login";
+import auth0 from "auth0-js";
+import Auth from "../Auth/Auth.js";
+import Popup from "react-popup";
+
+import Dashboard from "./Dashboard";
+import Buy from "./Buy";
+import MyBackpack from "./MyBackpack";
+import Spend from "./Spend";
+import Book from "./Book";
+import Login from "./Login";
+
+const auth = new Auth();
+// auth.login();
+
+const responseInstagram = response => {
+  console.log(response);
+};
+
+const handleSocialLogin = user => {
+  // console.log(user);
+  if (user === user) {
+    console.log(user + "is Logged in.");
+  } else {
+    console.log(user);
+  }
+};
+
+const handleSocialLoginFailure = err => {
+  console.error(err);
+};
 
 const FixedMenu = () => (
   <Menu fixed="top" size="large">
@@ -28,11 +63,11 @@ const FixedMenu = () => (
       <Menu.Item as="a">Dashboard</Menu.Item>
       {/* <Menu.Item as="a">My Backpack</Menu.Item> */}
       <Menu.Item as="a">Buy Points</Menu.Item>
-      <Menu.Item as="a">Gift Points</Menu.Item>
-      <Menu.Item as="a">Earn Points</Menu.Item>
+      {/* <Menu.Item as="a">Gift Points</Menu.Item>
+      <Menu.Item as="a">Earn Points</Menu.Item> */}
       <Menu.Menu position="right">
         <Menu.Item className="item">
-          <Button basic color="violet" as="a">
+          <Button basic color="violet" as="a" onClick={Auth}>
             Log in
           </Button>
         </Menu.Item>
@@ -90,12 +125,12 @@ export default class HomepageLayout extends Component {
                 <Link to={`/buy`}>
                   <Menu.Item as="a">Buy</Menu.Item>
                 </Link>
-                <Link to={`/earn`}>
+                {/* <Link to={`/earn`}>
                   <Menu.Item as="a">Earn</Menu.Item>
                 </Link>
                 <Link to={`/gift`}>
                   <Menu.Item as="a">Gift</Menu.Item>
-                </Link>
+                </Link> */}
                 <Link to={`/book`}>
                   <Menu.Item as="a">Book Travel</Menu.Item>
                 </Link>
@@ -103,7 +138,7 @@ export default class HomepageLayout extends Component {
                   <Button basic color="violet">
                     My Backpack
                   </Button>
-                  <Button basic color="blue">
+                  <Button basic color="blue" onClick={auth.login}>
                     Log in
                   </Button>
                   <Button basic color="blue">
@@ -137,20 +172,62 @@ export default class HomepageLayout extends Component {
               <br />
               <br />
               Login with: &nbsp;
-              <Button color="facebook">
-                <Icon name="facebook" /> Facebook
-              </Button>
+              <SocialButton
+                provider="facebook"
+                appId="178953362706490"
+                onLoginSuccess={handleSocialLogin}
+                onLoginFailure={handleSocialLoginFailure}
+              >
+                <Button color="facebook" onClick={Popup.alert}>
+                  <Icon name="facebook" /> Facebook
+                </Button>
+                <Popup />
+              </SocialButton>
+              <SocialButton
+                provider="google"
+                appId="440198501776-sbtfoml6df7badr0smbeq6gekknedeih.apps.googleusercontent.com"
+                onLoginSuccess={handleSocialLogin}
+                onLoginFailure={handleSocialLoginFailure}
+              >
+                {/* <img src={require("./images/google.png")} style={socialButtonGoogle} /> */}
+              
               <Button color="google plus">
                 <Icon name="google plus" /> Google
               </Button>
+              </SocialButton>
+              {/* <InstagramLogin
+              clientId="fa4d833b7db84483a21b13423af3bac5"
+              // buttonText="Login"
+              onSuccess={responseInstagram}
+              onFailure={responseInstagram}
+              
+            /> */}
+           
+          
               <Button color="instagram">
                 <Icon name="instagram" /> Instagram
-              </Button>
+                </Button>
+                
+             
+              
+             
+              {/* <Dapp /> */}
+             
+            
+              
               <br />
               {/* <Button basic color="violet" primary size="huge">
                 My Backpack
                 <Icon name="right arrow" />
               </Button> */}
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/buy" component={Buy} />
+              {/* <Route path="/gift" component={Gift} />
+<Route path="/earn" component={Earn} /> */}
+              <Route path="/spend" component={Spend} />
+              <Route path="/mybackpack" component={MyBackpack} />
+              <Route path="/login" component={Login} />
+              <Route path="/book" component={Book} />
             </Container>
             {/* <Dapp /> */}
           </Segment>

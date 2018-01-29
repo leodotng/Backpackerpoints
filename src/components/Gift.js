@@ -3,18 +3,18 @@ import React, { Component } from "react";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const fixImage = {
-  width: "300px",
-  height: "300px"
+  width: "50px",
+  height: "50px"
 };
 
 const fixImageTwo = {
-  width: "250px",
-  height: "250px"
+  width: "50px",
+  height: "50px"
 };
 
 const fixImageThree = {
-  width: "250px",
-  height: "250px",
+  width: "50px",
+  height: "50px",
   opacity: "0.5",
   filter: "alpha(opacity=20)"
 };

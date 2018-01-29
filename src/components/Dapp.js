@@ -1,32 +1,32 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+// import ReactDOM from "react-dom";
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 // import { Security, ImplicitCallback } from "@okta/okta-react";
 import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,
+  // Button,
+  // Container,
+  // Divider,
+  // Grid,
+  // Header,
+  // Icon,
+  // Image,
+  // List,
+  // Menu,
+  // Segment,
+  // Visibility,
 } from 'semantic-ui-react';
 import "reactsymbols-kit/ReactSymbolsKit.css";
 import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
 // import Home from "./Home";
-import BuyPoints from "./Buy";
-import Gift from "./Gift";
-import Earn from "./Earn";
-import MyBackpack from "./MyBackpack";
-import Spend from "./Spend";
-import HomepageLayout from "./HomepageLayout";
-import Book from "./Book";
-import Login from "./Login";
+// import BuyPoints from "./Buy";
+// import Gift from "./Gift";
+// import Earn from "./Earn";
+// import MyBackpack from "./MyBackpack";
+// import Spend from "./Spend";
+// import HomepageLayout from "./HomepageLayout";
+// import Book from "./Book";
+// import Login from "./Login";
 
 // import auth0 from 'auth0-js';
 
@@ -34,13 +34,13 @@ import "./App.css";
 // import Logo from "./images/bp.png";
 import ReactGA from "react-ga";
 import SocialButton from "./SocialButton";
-import InstagramLogin from "react-instagram-login";
+// import InstagramLogin from "react-instagram-login";
 ReactGA.initialize("UA-112995308-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-const responseInstagram = response => {
-  console.log(response);
-};
+// const responseInstagram = response => {
+//   console.log(response);
+// };
 
 const handleSocialLogin = user => {
   console.log(user);
