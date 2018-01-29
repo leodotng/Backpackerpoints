@@ -20,11 +20,11 @@ import { RSButton } from "reactsymbols-kit";
 // import mapboxgl from "mapbox-gl";
 import Home from "./Home";
 import Dashboard from "./components/Dashboard";
-import BuyPoints from "./components/BuyPoints";
-import GiftPoints from "./components/GiftPoints";
-import EarnPoints from "./components/EarnPoints";
+import Buy from "./components/Buy";
+import Gift from "./components/Gift";
+import Earn from "./components/Earn";
 import MyBackpack from "./components/MyBackpack";
-import SpendPoints from "./components/SpendPoints";
+import Spend from "./components/Spend";
 import HomepageLayout from "./components/HomepageLayout";
 import Book from "./components/Book";
 import Login from "./components/Login";
@@ -79,16 +79,16 @@ class App extends Component {
       <Router>
         <Switch>
           <div>
-            <HomepageLayout />
-              
+            
             <Route path="/dashboard" component={Dashboard} />
-            <Route path="/buy" component={BuyPoints} />
-            <Route path="/gift" component={GiftPoints} />
-            <Route path="/earn" component={EarnPoints} />
-            <Route path="/spend" component={SpendPoints} />
+            <Route path="/buy" component={Buy} />
+            <Route path="/gift" component={Gift} />
+            <Route path="/earn" component={Earn} />
+            <Route path="/spend" component={Spend} />
             <Route path="/mybackpack" component={MyBackpack} />
             <Route path="/login" component={Login} />
             <Route path="/book" component={Book} />
+            <HomepageLayout />
           </div>
         </Switch>
       </Router>

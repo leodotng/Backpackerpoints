@@ -19,7 +19,7 @@ const fixImageThree = {
   filter: "alpha(opacity=20)"
 };
 
-class GiftPoints extends Component {
+class Gift extends Component {
   render() {
     return (
       <div>
@@ -42,4 +42,4 @@ class GiftPoints extends Component {
     );
   }
 }
-export default GiftPoints;
+export default Gift;
