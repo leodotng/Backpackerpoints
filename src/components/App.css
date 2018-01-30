@@ -14,9 +14,17 @@
   align-content: center;
 }
 
+.Div-Padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .sliderSize {
   height: "100px";
     width: "50px";
+}
+.Txt-color {
+  color: white;
+  text-align: center;
 }
 
 .Button-align {

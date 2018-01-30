@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Checkbox, Header } from 'semantic-ui-react';
+import "./App.css";
 
 const textStyle = {
     color: "white"
@@ -16,7 +17,7 @@ export default class CheckboxExampleRadioGroup extends Component {
           Choose How Many Points: <b>{this.state.value}</b>
         </Form.Field>
         <Form.Field>
-        <Header as='h3' color='red'><Checkbox
+        <h1 className="txt-color"><Checkbox
             radio
             label='100 Points $25.00'
             color='red'
@@ -24,7 +25,7 @@ export default class CheckboxExampleRadioGroup extends Component {
             value='100 Points $25.00'
             checked={this.state.value === '100 Points $25.00'}
             onChange={this.handleChange}
-          /></Header>
+          /></h1>
         </Form.Field>
         <Form.Field>
           <Checkbox

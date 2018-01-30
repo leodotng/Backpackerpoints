@@ -6,8 +6,11 @@ const MyMapComponent = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyB_fEkwD6OqzP8_b-sw6fMfsAEPMWWB74k&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%`, width: `100%` }} />,
-    containerElement: <div style={{ height: `400px`, width: `1000px` }} />,
-    mapElement: <div style={{ height: `100%`, width: `800px` }} />,
+    // loadingElement: <div style={{ height: `100%`, width: `100%` }} />,
+    containerElement: <div style={{ height: `400px`, width: `100%` }} />,
+    // containerElement: <div style={{ height: `400px`, width: `1000px` }} />,
+    mapElement: <div style={{ height: `100%`, width: `100%`}} />,
+    // mapElement: <div style={{ height: `100%`, width: `800px` }} />,
     center: { lat: 25.03, lng: 121.6 },
   }),
   withScriptjs,

@@ -3,9 +3,9 @@ import React, { Component } from "react";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Box from "./Box";
 import Gmaps from "./Gmaps";
-import DemoCarousel from './DemoCarousel';
+import DemoCarousel from "./DemoCarousel";
+import { Card, Icon, Image } from "semantic-ui-react";
 import "./App.css";
-
 
 // const fixImage = {
 //     width: "50px",
@@ -19,19 +19,36 @@ import "./App.css";
 //     align: "middle",
 //     display: "inline-block"
 //   };
+
+const wideCard = {
+    width: "1250px"
+  }
 class Book extends Component {
-    render() {
-        return (
-            <div>
-                <div>
-                    
-                    {/* <DemoCarousel /> */}
-                </div>
-                <div>
+  render() {
+    return (
+      <div>
+        <div>{/* <DemoCarousel /> */}</div>
+        <div>
+          <Card style={wideCard}>
+            <Card.Content>
+              <Card.Header>Josh</Card.Header>
+              <Card.Meta>
+                <span className="date">Backpacker since 2018</span>
+              </Card.Meta>
+              <Card.Description>
                 <Gmaps />
-                    </div>
-                    </div>
-        )
-    }
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <a>
+                <Icon name="user" />
+                6,288 Points in your Backpack!
+              </a>
+            </Card.Content>
+          </Card>
+        </div>
+      </div>
+    );
+  }
 }
 export default Book;
