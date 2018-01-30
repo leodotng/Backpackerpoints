@@ -27,6 +27,7 @@ export default class TakeMoney extends React.Component {
   image="https://pbs.twimg.com/profile_images/954481161379700736/Y4FygLho_400x400.jpg" // the pop-in header image (default none)
   ComponentClass="div"
   panelLabel="Confirm Purchase"
+  closed={this.onClosed}
       />
     )
   }

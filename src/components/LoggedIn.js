@@ -8,9 +8,10 @@ import GiftPoints from "./GiftPoints";
 // import GridRow from "semantic-ui-react/dist/commonjs/collections/Grid/GridRow";
 
 const dash = require("../images/dashboard.png");
+const profilePic = require("../images/profile.jpg");
 
 const dashBoard = {
-  height: "100px",
+  height: "125px",
   width: "150px"
 };
 const fixImage = {
@@ -27,14 +28,10 @@ const buttonPropertiesTwo = {
   width: "200px",
   height: "40px"
 };
-// const wideCard = {
-//   width: "100%",
-//   height: "100%"
-// }
-// const cardWidth = {
-//   width: "400px",
-//   height: "100%"
-// }
+const profilePhoto = {
+  height: "75px",
+  width: "75px"
+};
 
 
 
@@ -43,6 +40,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
+        
         <div>
           <Grid columns={3}>
             <Grid.Row>
@@ -55,6 +53,7 @@ class Dashboard extends Component {
                     </Card.Meta>
                     <Card.Description>
                       <h1> Dashboard </h1>
+                      <img src={profilePic} class="ui avatar image" style={profilePhoto} />
                       <img src={dash} style={dashBoard} />
                     </Card.Description>
                   </Card.Content>

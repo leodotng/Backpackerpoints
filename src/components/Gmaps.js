@@ -64,7 +64,7 @@ class Gmaps extends React.PureComponent {
   render() {
     return (
       <div>
-        <Grid columns={2}>
+        <Grid columns={1}>
         <Grid.Row>
           <Grid.Column>
       <Card>
@@ -79,10 +79,7 @@ class Gmaps extends React.PureComponent {
                     </Card.Description>
                   </Card.Content>
                   <Card.Content extra>
-                    <a>
-                      <Icon name="user" />
-                      6,288 Points in your Backpack!
-                    </a>
+                    
                   </Card.Content>
                 </Card>
                 </Grid.Column>

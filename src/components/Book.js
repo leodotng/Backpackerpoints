@@ -4,43 +4,40 @@ import React, { Component } from "react";
 // import Box from "./Box";
 import Gmaps from "./Gmaps";
 import DemoCarousel from "./DemoCarousel";
-import { Grid, Card, Icon, Image } from "semantic-ui-react";
+import { Button, Grid, Card, Icon, Image } from "semantic-ui-react";
 import HostelandTourData from "./HostelandTourData";
+import Modals from './Modals';
 
 import "./App.css";
 
-const wideCard = {
-    width: "100%"
-}
-
+const iconSize = {
+  width: "13px",
+  height: "13px"
+};
 class Book extends Component {
   render() {
     return (
-        <div style={wideCard}>
-        <div style={wideCard}>
-         
-              
-              <Card style={wideCard}>
-                  <Card.Content style={wideCard}>
-                    
-                    {/* <Card.Meta>
-                      <span className="date">Backpacker since 2018</span>
-                    </Card.Meta> */}
-                    <Card.Description>
-                      <h1> Book Travel </h1>
-                      
-                      <Gmaps />
-                    </Card.Description>
-                  </Card.Content>
-                  <Card.Content extra>
-                    <a>
-                      <Icon name="plane" />
-                      6,288 Points in your Backpack!
-                    </a>
-                  </Card.Content>
-                </Card>
-                
-             
+      <div>
+        
+        <Button basic color="blue">
+          <img src={require("../images/backpackicon.png")} style={iconSize} />
+          My Backpack 100 Points
+        </Button>
+        <div>
+          <Card>
+            <Card.Content>
+              <Card.Description>
+                <h1> Book Travel </h1>
+                <Gmaps />
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <a>
+                <Icon name="plane" />
+                100 Points in your Backpack!
+              </a>
+            </Card.Content>
+          </Card>
         </div>
       </div>
     );

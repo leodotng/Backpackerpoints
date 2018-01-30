@@ -42,7 +42,7 @@ class Buy extends Component {
                           </Card.Header>
                           <Card.Meta>
                             <span className='date'>
-                            Backpacker since 2018
+                           
                             </span>
                             </Card.Meta>
                             <Card.Description>
@@ -54,10 +54,7 @@ class Buy extends Component {
                             </Card.Description>
                             </Card.Content>
                             <Card.Content extra>
-                            <a>
-                              <Icon name='user' />
-                              6,288 Points in your Backpack!
-                              </a>
+                            
                               </Card.Content>
                               </Card>
                       

@@ -14,7 +14,7 @@ import {
 } from "semantic-ui-react";
 // Removed Divider and Image
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Home from "./Home";
 import Dapp from "./Dapp";
 import Gmaps from "./Gmaps";
 import DemoCarousel from "./DemoCarousel";
@@ -29,9 +29,10 @@ import MyBackpack from "./MyBackpack";
 import Spend from "./Spend";
 import Book from "./Book";
 import Login from "./Login";
+import LoggedIn from "./LoggedIn";
 import ActivityFeed from "./ActivityFeed";
 import "./App.css";
-import { Card, Feed } from 'semantic-ui-react';
+import { Card, Feed } from "semantic-ui-react";
 
 const auth = new Auth();
 // auth.login();
@@ -56,19 +57,18 @@ const FixedMenu = () => (
         Home
       </Menu.Item>
       <Menu.Item as="a">Dashboard</Menu.Item>
-      {/* <Menu.Item as="a">My Backpack</Menu.Item> */}
-      <Menu.Item as="a">Buy Points</Menu.Item>
-      {/* <Menu.Item as="a">Gift Points</Menu.Item>
-      <Menu.Item as="a">Earn Points</Menu.Item> */}
+   
       <Menu.Menu position="right">
         <Menu.Item className="item">
           <Button basic color="violet" as="a" onClick={Auth}>
+          <Icon name="log in" />
             Log in
           </Button>
         </Menu.Item>
         <Menu.Item>
           <Button basic color="violet" as="a" primary>
-            Sign Up
+          <Icon name="log out" />
+            Logout
           </Button>
         </Menu.Item>
       </Menu.Menu>
@@ -78,11 +78,15 @@ const FixedMenu = () => (
 
 const wideCard = {
   width: "100%"
-}
+};
 const logoSize = {
   width: "100px",
   height: "100px"
-}
+};
+const iconSize = {
+  width: "13px",
+  height: "13px"
+};
 export default class HomepageLayout extends Component {
   state = {};
 
@@ -109,7 +113,7 @@ export default class HomepageLayout extends Component {
           >
             <Container>
               <Menu inverted pointing secondary size="large">
-                <Link to={`/home`}>
+                <Link to={`/`}>
                   <Menu.Item as="a" active>
                     Home
                   </Menu.Item>
@@ -117,29 +121,26 @@ export default class HomepageLayout extends Component {
                 <Link to={`/dashboard`}>
                   <Menu.Item as="a">Dashboard</Menu.Item>
                 </Link>
-                
+
                 <Link to={`/book`}>
                   <Menu.Item as="a">Book Travel</Menu.Item>
                 </Link>
                 <Menu.Item position="right">
-                  <Button basic color="blue">
-                    My Backpack
-                    100 Points
-                  </Button>
+                  
                   <Button basic color="blue" onClick={auth.login}>
                     Log in
                   </Button>
                   <Button basic color="blue">
-                    Sign Up
+                  <Icon name="log out" />
+                    Logout
                   </Button>
                 </Menu.Item>
               </Menu>
             </Container>
             <Container>
-              {/* <img src={require('./images/backpackerlogo.png')} /> */}
             </Container>
-            <Container text>
-            <img src={require('../images/logo2.png')} style={logoSize}/>
+            <div fluid>
+              <img src={require("../images/logo2.png")} style={logoSize} />
               <Header
                 as="h1"
                 content="Backpackerpoints"
@@ -166,11 +167,16 @@ export default class HomepageLayout extends Component {
                   appId="178953362706490"
                   onLoginSuccess={handleSocialLogin}
                   onLoginFailure={handleSocialLoginFailure}
+                  btnProps={{
+                    disabled: true,
+                    onClick: function(){alert('Callback called.');}
+                  }}
+                  
                 >
                   <Button color="facebook" onClick={Popup.alert}>
                     <Icon name="facebook" /> Facebook
                   </Button>
-                  <Popup />
+                  
                 </SocialButton>
                 <SocialButton
                   provider="google"
@@ -178,7 +184,7 @@ export default class HomepageLayout extends Component {
                   onLoginSuccess={handleSocialLogin}
                   onLoginFailure={handleSocialLoginFailure}
                 >
-                  {/* <img src={require("./images/google.png")} style={socialButtonGoogle} /> */}
+                  
 
                   <Button color="google plus">
                     <Icon name="google plus" /> Google
@@ -195,28 +201,18 @@ export default class HomepageLayout extends Component {
                   <Icon name="instagram" /> Instagram
                 </Button>
               </div>
-
-              {/* <Dapp /> */}
-
-              <br />
-              {/* <Button basic color="violet" primary size="huge">
-                My Backpack
-                <Icon name="right arrow" />
-              </Button> */}
-              <Route path="/dashboard" component={Dashboard} />
-              {/* <Route path="/buy" component={Buy} /> */}
-              {/* <Route path="/gift" component={Gift} />
-<Route path="/earn" component={Earn} /> */}
+           
+              <Route path="/dashboard" component={LoggedIn} />
+              <Route path="/home" component={Home} />
               <Route path="/spend" component={Spend} />
               <Route path="/mybackpack" component={MyBackpack} />
               <Route path="/login" component={Login} />
               <Route path="/book" component={Book} />
-            </Container>
-            {/* <Dapp /> */}
+              <Route path="/user=loggedinsuccess" component={LoggedIn} />
+            </div>
           </Segment>
         </Visibility>
 
-        
         <Segment inverted vertical style={{ padding: "3em 0em" }}>
           <Container>
             <Grid divided inverted stackable>

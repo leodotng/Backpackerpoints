@@ -53,27 +53,27 @@ const handleSocialLoginFailure = err => {
   console.error(err);
 };
 
-const pStyle = {
-  fontSize: "55px",
-  textAlign: "center",
-  width: "100vw",
-  height: "30vh"
-};
-const socialB = {
-  width: "250px",
-  height: "40px"
-};
-const bPoints = {
-  fontSize: "55px",
-  textAlign: "center",
-  paddingTop: "30px",
-  paddingBottom: "30px",
-  textAlign: "center"
-};
+// const pStyle = {
+//   fontSize: "55px",
+//   textAlign: "center",
+//   width: "100vw",
+//   height: "30vh"
+// };
+// const socialB = {
+//   width: "250px",
+//   height: "40px"
+// };
+// const bPoints = {
+//   fontSize: "55px",
+//   textAlign: "center",
+//   paddingTop: "30px",
+//   paddingBottom: "30px",
+//   textAlign: "center"
+// };
 
-const centerButtons = {
-  textAlign: "center"
-};
+// const centerButtons = {
+//   textAlign: "center"
+// };
 
 class App extends Component {
   render() {
