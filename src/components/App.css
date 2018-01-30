@@ -7,16 +7,16 @@
   height: 20px;
 }
 
-.Map-window {
+/* .Map-window {
   height: 85vh;
   width: 400px;
   padding-top: 5px; 
   align-content: center;
-}
+} */
 
 .Div-Padding {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 .sliderSize {
   height: "100px";

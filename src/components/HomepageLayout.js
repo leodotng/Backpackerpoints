@@ -31,7 +31,7 @@ import Book from "./Book";
 import Login from "./Login";
 import ActivityFeed from "./ActivityFeed";
 import "./App.css";
-import { Card, Feed } from 'semantic-ui-react'
+import { Card, Feed } from 'semantic-ui-react';
 
 const auth = new Auth();
 // auth.login();
@@ -76,10 +76,9 @@ const FixedMenu = () => (
   </Menu>
 );
 
-// const backgroundStyles = {
-//   height: '30vh',
-//   width: '40vw'
-// }
+const wideCard = {
+  width: "100%"
+}
 export default class HomepageLayout extends Component {
   state = {};
 
@@ -117,9 +116,9 @@ export default class HomepageLayout extends Component {
                 {/* <Link to={`/mybackpack`}>
                   <Menu.Item as="a">My Backpack</Menu.Item>
                 </Link> */}
-                <Link to={`/buy`}>
+                {/* <Link to={`/buy`}>
                   <Menu.Item as="a">Buy</Menu.Item>
-                </Link>
+                </Link> */}
                 {/* <Link to={`/earn`}>
                   <Menu.Item as="a">Earn</Menu.Item>
                 </Link>
@@ -155,14 +154,14 @@ export default class HomepageLayout extends Component {
                   fontSize: "5em",
                   fontWeight: "normal",
                   marginBottom: 0,
-                  marginTop: ".1em"
+                  marginTop: 0
                 }}
               />
               <Header
                 as="h2"
                 content="A new travel rewards program just for backpackers!"
                 inverted
-                style={{ fontSize: "1.7em", fontWeight: "normal" }}
+                style={{ fontSize: "1.3em", fontWeight: "normal" }}
               />
               <br />
               <br />
@@ -211,7 +210,7 @@ export default class HomepageLayout extends Component {
                 <Icon name="right arrow" />
               </Button> */}
               <Route path="/dashboard" component={Dashboard} />
-              <Route path="/buy" component={Buy} />
+              {/* <Route path="/buy" component={Buy} /> */}
               {/* <Route path="/gift" component={Gift} />
 <Route path="/earn" component={Earn} /> */}
               <Route path="/spend" component={Spend} />
@@ -223,25 +222,7 @@ export default class HomepageLayout extends Component {
           </Segment>
         </Visibility>
 
-        <Segment style={{ padding: "0em" }} vertical>
-          <Grid celled="internally" columns="equal" stackable>
-            <Grid.Row textAlign="center">
-              <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-              <ActivityFeed />
-              
-              </Grid.Column>
-              <Grid.Column style={{ paddingBottom: "2em", paddingTop: "5em" }}>
-                <Header as="h3" style={{ fontSize: "2em" }}>
-                  Backpack Details here
-                </Header>
-                <p style={{ fontSize: "1.33em" }}>
-                  {/* <Image avatar src='/assets/images/avatar/large/nan.jpg' /> */}
-                  <DemoCarousel />
-                </p>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
+        
         <Segment inverted vertical style={{ padding: "3em 0em" }}>
           <Container>
             <Grid divided inverted stackable>

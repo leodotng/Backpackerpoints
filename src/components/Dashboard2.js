@@ -28,17 +28,15 @@ const buttonPropertiesTwo = {
   height: "40px"
 };
 const wideCard = {
-  width: "100%"
-}
-
-
+    width: "500px"
+  }
 class Dashboard extends Component {
   render() {
     return (
-      <div style={wideCard}>
-        <div style={wideCard}>
-          <Grid columns={4} style={wideCard}>
-            <Grid.Row style={wideCard}>
+      <div>
+        <div>
+          <Grid>
+            <Grid.Row columns={4}>
               <Grid.Column>
                 <Card style={wideCard}>
                   <Card.Content>

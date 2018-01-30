@@ -15,7 +15,7 @@ const ActivityFeed = () => (
           <Feed.Content>
             <Feed.Date content='1 day ago' />
             <Feed.Summary>
-              Irene just bought 500 backpackerpoints!
+              Irene just bought 100 backpackerpoints!
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>

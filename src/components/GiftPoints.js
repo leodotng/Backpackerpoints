@@ -25,7 +25,7 @@ import "./App.css";
   const wideCard = {
     width: "1250px"
   }
-class Buy extends Component {
+class GiftPoints extends Component {
     render() {
         return (
                 <div>
@@ -38,12 +38,10 @@ class Buy extends Component {
                    <Card>
                       <Card.Content>
                         <Card.Header>
-                          Buy Points
+                          Gift or Send Points
                           </Card.Header>
                           <Card.Meta>
-                            <span className='date'>
-                            Backpacker since 2018
-                            </span>
+                            
                             </Card.Meta>
                             <Card.Description>
                             <CheckboxExampleRadioGroup style={txtWhite}/>
@@ -67,4 +65,4 @@ class Buy extends Component {
         )
     }
 }
-export default Buy;
+export default GiftPoints;

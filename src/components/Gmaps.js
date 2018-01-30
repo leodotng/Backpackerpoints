@@ -1,6 +1,8 @@
 import React from "react"
 import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import HostelandTourData from "./HostelandTourData";
+import { Grid, Card, Icon, Feed } from 'semantic-ui-react';
 
 const MyMapComponent = compose(
   withProps({
@@ -61,10 +63,40 @@ class Gmaps extends React.PureComponent {
   }
   render() {
     return (
+      <div>
+        <Grid columns={2}>
+        <Grid.Row>
+          <Grid.Column>
+      <Card>
+                  <Card.Content>
+                    <Card.Header>Hostels & Tours</Card.Header>
+                    <Card.Meta>
+                      <span className="date">Backpacker since 2018</span>
+                    </Card.Meta>
+                    <Card.Description>
+                      <h1> Book Travel </h1>
+                      <HostelandTourData />
+                    </Card.Description>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <a>
+                      <Icon name="user" />
+                      6,288 Points in your Backpack!
+                    </a>
+                  </Card.Content>
+                </Card>
+                </Grid.Column>
+                <Grid.Column>
+<Card>
       <MyMapComponent
         isMarkerShown={this.state.isMarkerShown}
         onMarkerClick={this.handleMarkerClick}
       />
+      </Card>
+      </Grid.Column>
+      </Grid.Row>
+      </Grid>
+      </div>
     )
   }
 }

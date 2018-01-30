@@ -4,7 +4,9 @@ import React, { Component } from "react";
 // import Box from "./Box";
 import Gmaps from "./Gmaps";
 import DemoCarousel from "./DemoCarousel";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Grid, Card, Icon, Image } from "semantic-ui-react";
+import HostelandTourData from "./HostelandTourData";
+
 import "./App.css";
 
 // const fixImage = {
@@ -21,31 +23,37 @@ import "./App.css";
 //   };
 
 const wideCard = {
-    width: "1250px"
-  }
+    width: "100%"
+}
+
 class Book extends Component {
   render() {
     return (
-      <div>
-        <div>{/* <DemoCarousel /> */}</div>
-        <div>
-          <Card style={wideCard}>
-            <Card.Content>
-              <Card.Header>Josh</Card.Header>
-              <Card.Meta>
-                <span className="date">Backpacker since 2018</span>
-              </Card.Meta>
-              <Card.Description>
-                <Gmaps />
-              </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-              <a>
-                <Icon name="user" />
-                6,288 Points in your Backpack!
-              </a>
-            </Card.Content>
-          </Card>
+        <div style={wideCard}>
+        <div style={wideCard}>
+         
+              
+              <Card style={wideCard}>
+                  <Card.Content style={wideCard}>
+                    <Card.Header>Josh</Card.Header>
+                    <Card.Meta>
+                      <span className="date">Backpacker since 2018</span>
+                    </Card.Meta>
+                    <Card.Description>
+                      <h1> Book Travel </h1>
+                      
+                      <Gmaps />
+                    </Card.Description>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <a>
+                      <Icon name="plane" />
+                      6,288 Points in your Backpack!
+                    </a>
+                  </Card.Content>
+                </Card>
+                
+             
         </div>
       </div>
     );
