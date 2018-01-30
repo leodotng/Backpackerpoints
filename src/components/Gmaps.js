@@ -20,7 +20,7 @@ const MyMapComponent = compose(
 )((props) =>
   <GoogleMap
     defaultZoom={13}
-    defaultCenter={{ lat: -13.531950, lng: -71.967463 }}
+    defaultCenter={{ lat: -13.519504, lng: -71.980509 }}
   >
   {/* Hostel Pirwa Colonial Calle Tordo, Cusco 08000, Peru */}
     {props.isMarkerShown && <Marker position={{ lat: -13.519504, lng: -71.980509 }} onClick={props.onMarkerClick} />}

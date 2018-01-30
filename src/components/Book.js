@@ -9,19 +9,6 @@ import HostelandTourData from "./HostelandTourData";
 
 import "./App.css";
 
-// const fixImage = {
-//     width: "50px",
-//     height: "50px",
-//     align: "middle",
-//     display: "inline-block"
-//   };
-//   const formatMap = {
-//     width: "450px",
-//     height: "450px",
-//     align: "middle",
-//     display: "inline-block"
-//   };
-
 const wideCard = {
     width: "100%"
 }
@@ -35,10 +22,10 @@ class Book extends Component {
               
               <Card style={wideCard}>
                   <Card.Content style={wideCard}>
-                    <Card.Header>Josh</Card.Header>
-                    <Card.Meta>
+                    
+                    {/* <Card.Meta>
                       <span className="date">Backpacker since 2018</span>
-                    </Card.Meta>
+                    </Card.Meta> */}
                     <Card.Description>
                       <h1> Book Travel </h1>
                       

@@ -28,19 +28,26 @@ const buttonPropertiesTwo = {
   height: "40px"
 };
 const wideCard = {
-  width: "100%"
+  width: "100%",
+  height: "100%"
 }
+const cardWidth = {
+  width: "400px",
+  height: "100%"
+}
+
+
 
 
 class Dashboard extends Component {
   render() {
     return (
-      <div style={wideCard}>
-        <div style={wideCard}>
-          <Grid columns={4} style={wideCard}>
-            <Grid.Row style={wideCard}>
+      <div>
+        <div>
+          <Grid columns={4}>
+            <Grid.Row>
               <Grid.Column>
-                <Card style={wideCard}>
+                <Card>
                   <Card.Content>
                     <Card.Header>Josh</Card.Header>
                     <Card.Meta>

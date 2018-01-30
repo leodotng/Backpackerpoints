@@ -79,6 +79,10 @@ const FixedMenu = () => (
 const wideCard = {
   width: "100%"
 }
+const logoSize = {
+  width: "100px",
+  height: "100px"
+}
 export default class HomepageLayout extends Component {
   state = {};
 
@@ -100,7 +104,7 @@ export default class HomepageLayout extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
+            style={{ minHeight: 700, padding: "0em 0em" }}
             vertical
           >
             <Container>
@@ -113,24 +117,14 @@ export default class HomepageLayout extends Component {
                 <Link to={`/dashboard`}>
                   <Menu.Item as="a">Dashboard</Menu.Item>
                 </Link>
-                {/* <Link to={`/mybackpack`}>
-                  <Menu.Item as="a">My Backpack</Menu.Item>
-                </Link> */}
-                {/* <Link to={`/buy`}>
-                  <Menu.Item as="a">Buy</Menu.Item>
-                </Link> */}
-                {/* <Link to={`/earn`}>
-                  <Menu.Item as="a">Earn</Menu.Item>
-                </Link>
-                <Link to={`/gift`}>
-                  <Menu.Item as="a">Gift</Menu.Item>
-                </Link> */}
+                
                 <Link to={`/book`}>
                   <Menu.Item as="a">Book Travel</Menu.Item>
                 </Link>
                 <Menu.Item position="right">
-                  <Button basic color="violet">
+                  <Button basic color="blue">
                     My Backpack
+                    100 Points
                   </Button>
                   <Button basic color="blue" onClick={auth.login}>
                     Log in
@@ -145,7 +139,7 @@ export default class HomepageLayout extends Component {
               {/* <img src={require('./images/backpackerlogo.png')} /> */}
             </Container>
             <Container text>
-              
+            <img src={require('../images/logo2.png')} style={logoSize}/>
               <Header
                 as="h1"
                 content="Backpackerpoints"
