@@ -143,7 +143,7 @@ export default class HomepageLayout extends Component {
                 content="Backpackerpoints"
                 inverted
                 style={{
-                  fontSize: "5em",
+                  fontSize: "6em",
                   fontWeight: "normal",
                   marginBottom: 0,
                   marginTop: 0
@@ -151,7 +151,7 @@ export default class HomepageLayout extends Component {
               />
               <Header
                 as="h2"
-                content="A new travel rewards program just for backpackers!"
+                content="The first and only travel rewards points program for backpackers to book hostels and tours abroad!"
                 inverted
                 style={{ fontSize: "1.3em", fontWeight: "normal" }}
               />
@@ -233,7 +233,8 @@ export default class HomepageLayout extends Component {
                   <Header as="h4" inverted>
                     Backpackerpoints
                   </Header>
-                  <p>A new travel rewards program just for backpackers!</p>
+                
+                  <p>The first and only travel rewards points program for backpackers to book hostels and tours abroad!</p>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
