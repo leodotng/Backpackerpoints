@@ -36,22 +36,20 @@ const buttonPropertiesTwo = {
 //   height: "100%"
 // }
 
-
-
-
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <Grid columns={3}>
-            <Grid.Row>
+      
+          <Grid stackable>
+            <Grid.Row columns={3}>
               <Grid.Column>
-                <Card>
+                <Card centered fluid>
                   <Card.Content>
                     <Card.Header>Josh</Card.Header>
                     <Card.Meta>
-                      <span className="date">Backpacker since 2018</span>
+                      <span className="date">
+                        Backpacker since January 2018
+                      </span>
                     </Card.Meta>
                     <Card.Description>
                       <h1> Dashboard </h1>
@@ -70,15 +68,13 @@ class Dashboard extends Component {
               <Grid.Column>
                 <Buy />
               </Grid.Column>
-              
+
               <Grid.Column>
                 <ActivityFeed />
               </Grid.Column>
-              
             </Grid.Row>
           </Grid>
-        </div>
-      </div>
+       
     );
   }
 }

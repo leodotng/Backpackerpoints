@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Feed } from 'semantic-ui-react'
 
 const ActivityFeed = () => (
-  <Card>
+  <Card centered fluid>
     <Card.Content>
       <Card.Header>
         Friends Feed
@@ -36,6 +36,24 @@ const ActivityFeed = () => (
             <Feed.Date content='4 days ago' />
             <Feed.Summary>
               Matt just booked 5 nights stay in Thailand for 800 points!
+            </Feed.Summary>
+          </Feed.Content>
+        </Feed.Event>
+        <Feed.Event>
+          <Feed.Label image='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/21317899_10156542047298709_4436546021536629740_n.jpg?oh=44de03dedd84888492884959e919d961&oe=5B1DE5D8' />
+          <Feed.Content>
+            <Feed.Date content='4 days ago' />
+            <Feed.Summary>
+              Jon just booked 2 nights stay in Australia for 300 points!
+            </Feed.Summary>
+          </Feed.Content>
+        </Feed.Event>
+        <Feed.Event>
+          <Feed.Label image='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/23844436_10155961525536383_6005416083881100635_n.jpg?oh=eb96178740916c47e5532cb14878767c&oe=5AE658BD' />
+          <Feed.Content>
+            <Feed.Date content='4 days ago' />
+            <Feed.Summary>
+              Jira just bought 1000 points!
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>

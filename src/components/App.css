@@ -15,8 +15,9 @@
 } */
 
 .Div-Padding {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  /* width: 100vw; */
+  /* padding-top: 1px; */
+  padding-bottom: 20px;
 }
 .sliderSize {
   height: "100px";

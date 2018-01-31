@@ -3,16 +3,15 @@ import {
   Button,
   Container,
   Image,
-  // Divider,
   Grid,
   Header,
   Icon,
   List,
   Menu,
   Segment,
-  Visibility
+  Visibility,
+  Card
 } from "semantic-ui-react";
-// Removed Divider and Image
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Home from "./Home";
 import Dapp from "./Dapp";
@@ -32,7 +31,7 @@ import Login from "./Login";
 import LoggedIn from "./LoggedIn";
 import ActivityFeed from "./ActivityFeed";
 import "./App.css";
-import { Card, Feed } from "semantic-ui-react";
+
 
 const auth = new Auth();
 // auth.login();
@@ -76,9 +75,7 @@ const FixedMenu = () => (
   </Menu>
 );
 
-const wideCard = {
-  width: "100%"
-};
+
 const logoSize = {
   width: "100px",
   height: "100px"
@@ -137,8 +134,7 @@ export default class HomepageLayout extends Component {
                 </Menu.Item>
               </Menu>
             </Container>
-            <Container>
-            </Container>
+            
             <div fluid>
               <img src={require("../images/logo2.png")} style={logoSize} />
               <Header
@@ -171,12 +167,10 @@ export default class HomepageLayout extends Component {
                     disabled: true,
                     onClick: function(){alert('Callback called.');}
                   }}
-                  
                 >
                   <Button color="facebook" onClick={Popup.alert}>
                     <Icon name="facebook" /> Facebook
-                  </Button>
-                  
+                  </Button> 
                 </SocialButton>
                 <SocialButton
                   provider="google"
@@ -184,8 +178,6 @@ export default class HomepageLayout extends Component {
                   onLoginSuccess={handleSocialLogin}
                   onLoginFailure={handleSocialLoginFailure}
                 >
-                  
-
                   <Button color="google plus">
                     <Icon name="google plus" /> Google
                   </Button>
@@ -201,21 +193,23 @@ export default class HomepageLayout extends Component {
                   <Icon name="instagram" /> Instagram
                 </Button>
               </div>
-           
-              <Route path="/dashboard" component={LoggedIn} />
+              <Route path="/dashboard" component={Dashboard} />
               <Route path="/home" component={Home} />
               <Route path="/spend" component={Spend} />
               <Route path="/mybackpack" component={MyBackpack} />
               <Route path="/login" component={Login} />
               <Route path="/book" component={Book} />
               <Route path="/user=loggedinsuccess" component={LoggedIn} />
-            </div>
+              
+              </div>
+
           </Segment>
         </Visibility>
 
         <Segment inverted vertical style={{ padding: "3em 0em" }}>
           <Container>
             <Grid divided inverted stackable>
+            {/* <Grid divided inverted stackable> */}
               <Grid.Row>
                 <Grid.Column width={3}>
                   <Header inverted as="h4" content="About Us" />
@@ -233,7 +227,7 @@ export default class HomepageLayout extends Component {
                     <List.Item as="a">Restaurants</List.Item>
                   </List>
                 </Grid.Column>
-                <Grid.Column width={7}>
+                <Grid.Column width={6}>
                   <Header as="h4" inverted>
                     Backpackerpoints
                   </Header>

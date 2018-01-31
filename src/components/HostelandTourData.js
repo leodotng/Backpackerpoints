@@ -42,7 +42,7 @@ const rootPanels = [
 ]
 
 const AccordionExampleNested = () => (
-  <Accordion defaultActiveIndex={2} panels={rootPanels} styled />
+  <Accordion defaultActiveIndex={4} panels={rootPanels} styled />
 )
 
 export default AccordionExampleNested

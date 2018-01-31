@@ -29,10 +29,8 @@ import HomepageLayout from "./components/HomepageLayout";
 import Book from "./components/Book";
 import Login from "./components/Login";
 // import Carousel from './components/Carousel';
-
 import auth0 from 'auth0-js';
 import Auth from "./Auth/Auth.js";
-
 import "./App.css";
 import Logo from "./images/bp.png";
 import ReactGA from "react-ga";
@@ -53,37 +51,12 @@ const handleSocialLoginFailure = err => {
   console.error(err);
 };
 
-// const pStyle = {
-//   fontSize: "55px",
-//   textAlign: "center",
-//   width: "100vw",
-//   height: "30vh"
-// };
-// const socialB = {
-//   width: "250px",
-//   height: "40px"
-// };
-// const bPoints = {
-//   fontSize: "55px",
-//   textAlign: "center",
-//   paddingTop: "30px",
-//   paddingBottom: "30px",
-//   textAlign: "center"
-// };
-
-// const centerButtons = {
-//   textAlign: "center"
-// };
-
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
-          {/* <BrowserRouter> */}
           <HomepageLayout />
-           
-          {/* </BrowserRouter> */}
         </Switch>
       </BrowserRouter>
     );

@@ -3,15 +3,7 @@ import StripePaymentButton from "./StripePaymentButton";
 import CheckboxExampleRadioGroup from "./CheckboxExampleRadioGroup";
 import { Card, Icon, Image } from "semantic-ui-react";
 import "./App.css";
-// import ReactDOM from "react-dom";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// const fixImage = {
-//     width: "50px",
-//     height: "50px",
-//     align: "middle",
-//     display: "inline-block"
-//   };
 
 const buttonPropertiesTwo = {
   width: "200px",
@@ -29,11 +21,6 @@ class GiftPoints extends Component {
   render() {
     return (
       <div>
-        {/* <h1> Buy Points Here </h1> */}
-
-        {/* <img src="http://www.cspdailynews.com/sites/default/files/styles/300_x_225/public/main/articles/chase-pay-300.png?itok=5zJI-isk" alt="chase pay" style={buttonProperties} />
-                    <img src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" alt="paypal" style={buttonPropertiesTwo} /> */}
-        {/* <img src="https://maccablo.com/wp-content/uploads/2017/07/Venmo-safe.jpg" alt="venmo" style={buttonProperties} /> */}
 
         <Card>
           <Card.Content>

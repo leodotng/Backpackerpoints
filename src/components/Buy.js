@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import StripePaymentButton from './StripePaymentButton';
 import CheckboxExampleRadioGroup from './CheckboxExampleRadioGroup';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import "./App.css";
 // import ReactDOM from "react-dom";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -13,18 +13,18 @@ import "./App.css";
 //     display: "inline-block"
 //   };
   
-  const buttonPropertiesTwo = {
-    width: "200px",
-    height: "40px"
-  };
+  // const buttonPropertiesTwo = {
+  //   width: "200px",
+  //   height: "40px"
+  // };
   const txtWhite = {
     color: "white",
     alignSelf: "center"
   };
 
-  const wideCard = {
-    width: "1250px"
-  }
+  // const wideCard = {
+  //   width: "1250px"
+  // }
 class Buy extends Component {
     render() {
         return (
@@ -35,7 +35,7 @@ class Buy extends Component {
                     <img src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" alt="paypal" style={buttonPropertiesTwo} /> */}
                     {/* <img src="https://maccablo.com/wp-content/uploads/2017/07/Venmo-safe.jpg" alt="venmo" style={buttonProperties} /> */}
                    
-                   <Card>
+                   <Card centered fluid>
                       <Card.Content>
                         <Card.Header>
                           Buy Points
