@@ -11,7 +11,7 @@ const Modals = () => (
       <Button color='red'>
         <Icon name='remove' /> No
       </Button>
-      <a href="http://localhost:3000">
+      <a href="http://localhost:3000/booking=success">
       <Button color='green'>
         <Icon name='checkmark' /> Confirm
       </Button>

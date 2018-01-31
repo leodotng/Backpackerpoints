@@ -25,6 +25,7 @@ import Popup from "react-popup";
 import Dashboard from "./Dashboard";
 import Buy from "./Buy";
 import MyBackpack from "./MyBackpack";
+import BookTwo from "./BookTwo";
 import Spend from "./Spend";
 import Book from "./Book";
 import Login from "./Login";
@@ -200,6 +201,7 @@ export default class HomepageLayout extends Component {
               <Route path="/login" component={Login} />
               <Route path="/book" component={Book} />
               <Route path="/user=loggedinsuccess" component={LoggedIn} />
+              <Route path="/booking=success" component={BookTwo} />
               
               </div>
 

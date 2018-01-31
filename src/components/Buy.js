@@ -35,7 +35,7 @@ class Buy extends Component {
                     <img src="https://woocommerce.com/wp-content/uploads/2016/04/PayPal-Express@2x.png" alt="paypal" style={buttonPropertiesTwo} /> */}
                     {/* <img src="https://maccablo.com/wp-content/uploads/2017/07/Venmo-safe.jpg" alt="venmo" style={buttonProperties} /> */}
                    
-                   <Card centered fluid>
+                   <Card fluid>
                       <Card.Content>
                         <Card.Header>
                           Buy Points
@@ -46,7 +46,7 @@ class Buy extends Component {
                             </span>
                             </Card.Meta>
                             <Card.Description>
-                            <CheckboxExampleRadioGroup style={txtWhite}/>
+                            <CheckboxExampleRadioGroup />
                     {/* <img src="http://cdn.onlinewebfonts.com/svg/img_549461.png" style={fixImage} /> */}
                     {/* <img src="https://www.doreservices.state.pa.us/images/credit_lg.jpg" style={buttonPropertiesTwo} alt="credit cards" />
                     <br /> */}

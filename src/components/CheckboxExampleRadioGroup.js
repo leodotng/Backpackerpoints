@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Checkbox, Header } from 'semantic-ui-react';
+import { Form, Checkbox, Header, Card } from 'semantic-ui-react';
 import "./App.css";
 
 const textStyle = {
@@ -12,9 +12,11 @@ export default class CheckboxExampleRadioGroup extends Component {
 
   render() {
     return (
+      <Card centered fluid>
       <Form>
-        <Form.Field>
+        <Form.Field><h3>
           Choose How Many Points: <b>{this.state.value}</b>
+          </h3>
         </Form.Field>
         <Form.Field>
         <h1 className="txt-color"><Checkbox
@@ -48,6 +50,7 @@ export default class CheckboxExampleRadioGroup extends Component {
           />
         </Form.Field>
       </Form>
+      </Card>
     )
   }
 }

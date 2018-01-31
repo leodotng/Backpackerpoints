@@ -17,7 +17,11 @@
 .Div-Padding {
   /* width: 100vw; */
   /* padding-top: 1px; */
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+.backgroundphoto {
+  opacity: 0.2;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 .sliderSize {
   height: "100px";

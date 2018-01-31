@@ -27,6 +27,9 @@ const Level1Content = (
 const level2Panels = [
   { title: 'Inka Sports (88 points per person)', content: 'ATV Tour to Moray Maras and Salt Flat' },
   { title: 'Andes Cusco Tours (220 points per person)', content: 'Cusco City Sightseeing Tour' },
+  { title: 'Huayna Picchu and Machu Picchu from Cusco (150 points per person)', content: 'Huayna Picchu and Machu Picchu from Cusco' },
+  { title: '4-Day Inca Jungle Adventure to Machu Picchu Including Mountain Biking, Rafting and Zipline (250 points per person)', content: '4-Day Inca Jungle Adventure to Machu Picchu Including Mountain Biking, Rafting and Zipline' },
+  { title: '4-Day Classic Machu Picchu Inca Jungle Trek (890 points per person)', content: '4-Day Classic Machu Picchu Inca Jungle Trek' },
 ]
 
 const Level2Content = (
@@ -42,7 +45,7 @@ const rootPanels = [
 ]
 
 const AccordionExampleNested = () => (
-  <Accordion defaultActiveIndex={4} panels={rootPanels} styled />
+  <Accordion defaultActiveIndex={1} panels={rootPanels} styled />
 )
 
 export default AccordionExampleNested

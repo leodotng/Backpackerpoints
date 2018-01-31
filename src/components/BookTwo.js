@@ -14,13 +14,13 @@ const iconSize = {
   width: "13px",
   height: "13px"
 };
-class Book extends Component {
+class BookTwo extends Component {
   render() {
     return (
       <div className="Div-Padding">
         <Button basic color="blue">
           <img src={require("../images/backpackicon.png")} style={iconSize} />
-          My Backpack 100 Points
+          My Backpack 78 Points
         </Button>
         <br />
         <br />
@@ -61,4 +61,4 @@ class Book extends Component {
     );
   }
 }
-export default Book;
+export default BookTwo;
