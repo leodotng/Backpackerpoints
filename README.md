@@ -7,7 +7,7 @@ The first and only travel rewards points program for backpackers to book hostels
 ## Getting Started
 
 Check us out at http://www.backpackerpoints.com/
-![Backpackerpoints Logo](https://www.famouslogos.us/images/facebook-logo.jpg)(https://facebook.com/backpackerpoints)
+![Backpackerpoints Logo](http://www.af.mil/DesktopModules/SocialMediaFeed/Templates/JCS/Images/FB-f-Logo__blue_50.png)(https://facebook.com/backpackerpoints)
 http://www.facebook.com/backpackerpoints
 http://www.instagram.com/backpackerpoints
 http://www.twitter.com/backpackerpoints
