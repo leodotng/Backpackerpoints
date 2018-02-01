@@ -21,6 +21,9 @@ npm install
 npm start
 Point browser to localhost:3000
 ```
+### App Walkthrough
+![Roofstops]()
+
 ## Built With
 
 * [React](https://reactjs.org/) - React
