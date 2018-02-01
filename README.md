@@ -7,32 +7,19 @@ The first and only travel rewards points program for backpackers to book hostels
 ## Getting Started
 
 Check us out at http://www.backpackerpoints.com/
+http://www.facebook.com/backpackerpoints
+http://www.instagram.com/backpackerpoints
+http://www.twitter.com/backpackerpoints
 
 
 ### Run Project Locally
 
-What things you need to install the software and how to install them
+Follow these steps to run the backpackerpoints app locally.
 
 ```
 git clone https://github.com/leodotng/Backpackerpoints.git
 cd Backpackerpoints
 npm install
-```
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
