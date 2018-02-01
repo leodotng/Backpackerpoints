@@ -2,37 +2,20 @@
 # Backpackerpoints ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/license-MIT-blue.svg)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
-Backpackerpoints is a new way for backpackers to book hostels and adventure tours. Backpackers can accrue, buy and spend backpackerpoints points using their online backpack to store points. Within each users Backpack dashboard there is a trip inspirer and points section. 
+The first and only travel rewards points program for backpackers to book hostels and tours abroad!
 
 ## Getting Started
 
-Backpackerpoints.com
+Check us out at http://www.backpackerpoints.com/
 
-### Prerequisites
+
+### Run Project Locally
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+git clone https://github.com/leodotng/Backpackerpoints.git
 ```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -60,9 +43,14 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [React](https://reactjs.org/) - React
+* [MERN Stack](http://mern.io/) - MongoDB, React, Express, Node
+* [Semantic UI React](https://react.semantic-ui.com/introduction) - Semantic UI React
+* [Google Maps API](https://developers.google.com/maps/) - Google Maps API
+* [Stripe Payments API](https://stripe.com/) - Stripe Payments API
+* [Paypal Payments API](https://www.paypal.com/us/home) - Paypal Payments API
+* [Chase Digital Payments](https://www.chase.com/digital/digital-payments) - Chase Digital Payments
+
 
 ## Contributing
 
