@@ -7,6 +7,7 @@ The first and only travel rewards points program for backpackers to book hostels
 ## Getting Started
 
 Check us out at http://www.backpackerpoints.com/
+![Backpackerpoints Logo](https://www.famouslogos.us/images/facebook-logo.jpg)(https://facebook.com/backpackerpoints)
 http://www.facebook.com/backpackerpoints
 http://www.instagram.com/backpackerpoints
 http://www.twitter.com/backpackerpoints
@@ -20,12 +21,9 @@ Follow these steps to run the backpackerpoints app locally.
 git clone https://github.com/leodotng/Backpackerpoints.git
 cd Backpackerpoints
 npm install
+npm start
+Point browser to localhost:3000
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [React](https://reactjs.org/) - React
