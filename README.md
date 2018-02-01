@@ -22,7 +22,7 @@ npm start
 Point browser to localhost:3000
 ```
 ### App Walkthrough
-![Roofstops]()
+![Roofstops](https://github.com/leodotng/Backpackerpoints/blob/master/src/images/bppwalkthrough.gif)
 
 ## Built With
 
